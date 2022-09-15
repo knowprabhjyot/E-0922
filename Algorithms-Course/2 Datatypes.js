@@ -55,6 +55,16 @@ console.log(typeof collegeAddress);
 console.log(typeof isTired); // object
 
 
+
+// Why null type of gave an object ?
+
+// Most of the things that are derived in javascript are coming from an object
+// For Example - array is also of type object
+
+
+// null --> Objects --> Array , functions etc
+
+
 // Comments
 // In Javascript you can write a piece of code or any other information as comments if you don't want it to run
 

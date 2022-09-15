@@ -14,6 +14,15 @@ var age = 27;
 const collegeName = "CICCC";
 
 
+// const prabh; // Give an error because you have to give const variable a value
+
+
+const game = "CallOfDuty";
+
+game = "Apex Games";
+
+console.log(game);  // TypeError: Assignment to constant variable.
+
 
 // Any programming language, needs an environment to execute
 
