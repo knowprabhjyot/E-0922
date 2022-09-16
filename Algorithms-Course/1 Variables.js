@@ -51,3 +51,10 @@ console.log(game);  // TypeError: Assignment to constant variable.
 console.log(userName);
 console.log(age);
 console.log(collegeName);
+
+
+
+// Create multiple variables in 1 line
+
+// Don't have to use multiple let keywords
+let a = 4, b = 5, c = 10;
