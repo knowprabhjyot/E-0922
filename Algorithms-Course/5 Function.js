@@ -10,6 +10,7 @@
 // Function Call
 // sum();
 
+// Here a, b are the parameters that will change based on given input
 function sum(a, b) {
     console.log(a + b);
 }
@@ -17,16 +18,16 @@ function sum(a, b) {
 
 // Here a, b are the parameters that will change based on given input
 
-sum(2, 3);
-sum(4, 9);
-sum(-5, 2);
+sum(2, 3); // 5
+sum(4, 9); // 13
+sum(-5, 2); // -3
 
 
 // Here name is a parameter passed to the function greetUser
 function greetUser(name) {
     // Here plus sign behaves as concatenation since we are using strings
     console.log('Hello ' + name);
-}
+} // returned value will be undefined
 
 
 
@@ -108,4 +109,11 @@ function addTen(number) {
 let newValue = addTen(5);
 
 console.log(newValue);
+
+
+// What happens when javascript function is returning something and we write something after the return statement
+function multiply(num1, num2) {
+    return num1 * num2;
+    console.log("Hello am i reachable");
+}
 
