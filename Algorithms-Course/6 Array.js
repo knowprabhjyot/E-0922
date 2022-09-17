@@ -103,3 +103,32 @@ let slicedValue = numberA.slice(0, 2);
 
 console.log(numberA, "Orignal Array");
 console.log(slicedValue, "new Array");
+
+
+
+
+// COMPLEX EXAMPLE
+// STUDENT RECORD
+
+let studentsRecords = [
+    {
+        name : "Akito",
+        rollNumber: 100
+    }, 
+    {
+        name: "Yuki",
+        rollNumber: 101
+    },
+    {
+        name: "Hikaru",
+        rollNumber : 102
+    }
+]
+
+
+studentsRecords.push({
+    name: "Geri",
+    rollNumber: 103
+})
+
+console.log(studentsRecords, "studentrecords");
