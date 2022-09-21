@@ -178,9 +178,9 @@ function gradeStudents(score1, score2, score3, score4) {
 
     if (averageScore >= 90) {
         console.log('Grade A');
-    } else if (averageScore >= 70 && averageScore < 90) {
+    } else if (averageScore >= 70) {
         console.log('Grade B');
-    } else if (averageScore >= 50 && averageScore < 70) {
+    } else if (averageScore >= 50) {
         console.log('Grade C');
     } else {
         console.log('Grade F');

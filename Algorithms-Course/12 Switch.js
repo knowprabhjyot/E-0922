@@ -23,14 +23,15 @@ switch (num) {
 }
 
 
-if (num == 10) {
+if (num == 10) { // false
     console.log('The value given to me is 10')
-} else if (num == 50) {
+} else if (num == 50) { // false
     console.log('The value given to me is 50');
-} else if (num == 70) {
+} else if (num == 70) { // false
     console.log('The value given to me is 70');
-} else if (num == 100) {
+} else if (num == 100) { // true
     console.log('The value given to me is 100');
 } else {
     console.log("no Match found");
 }
+
