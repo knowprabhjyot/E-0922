@@ -139,3 +139,20 @@ for (let i = 0; i < nums.length ; i++) {
 
 
 
+
+
+// Can we go backwards in a for loop
+let groceryList = ["Apples", "veggies", "Mangoes", "coldrink"];
+// Length  - 4
+// 0 1 2 3
+
+for (let i = groceryList.length - 1; i >= 0 ; i--) {
+    console.log(groceryList[i]);
+}
+
+// i-- ---> i = i - 1;
+
+// i = 3       groceryList[3]  "Coldrink"  i--
+// i = 2       grocerylIst[2]   "Mangoes"  i--
+// i = 1       grocerylIst[1]   "Veggies"  i--
+// i = 0       grocerylIst[0]   "Apples"  i--
