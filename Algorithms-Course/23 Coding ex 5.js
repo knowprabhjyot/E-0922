@@ -27,4 +27,8 @@ capitlize(str); // Hello World
 // .join method on the array
 
 
+// Question 3 , Write a binary function using recursion (VERY ADVANCE)
+
+
+// Question 4 , Write a function to find the sum of numbers in an array but using recursion
 
