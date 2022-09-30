@@ -264,3 +264,35 @@ function selectionSort(array) {
 // We are trying to update the min index value to that index value where the minimum value is found so far
 
 console.log(selectionSort(numListArray))
+
+
+
+
+// AKITO'S SOLUTION 
+
+function bubbleSort(array) {
+
+    let count = 0;
+    
+    for (let i = 0 ; i < array.length;i++) {
+        for (let j = 0; j < array.length - i - 1; j++) {
+        	count++;
+            if (array[j] > array[j + 1]) {
+                // Swap Elements
+                let temp = array[j]; // Tempoary variable
+                array[j] = array[j+1];
+                array[j+1] = temp;
+            }
+        } // O (n)
+    } // O (n)
+
+        		console.log(count, "first soultion");
+
+    // Nesting --> O (n) * O (n) = O(n^2)
+
+    return array;
+}
+
+let oddArrayLength = [20, 5, 1, 2, 10, -10, 0];
+
+console.log(bubbleSort(oddArrayLength));
