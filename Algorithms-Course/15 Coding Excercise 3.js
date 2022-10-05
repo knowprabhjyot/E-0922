@@ -72,8 +72,6 @@ printStars(5);
 **
 *
 
-
-
 */
 
 // Question 2
@@ -107,7 +105,12 @@ printStars(5);
     *       *
   *  * * * *  *  
 
-
-
 */
 
+
+function hollowTriangle(n) {
+  for (let i = 0 ; i <= n; i++) {
+    // Print spaces
+    
+  }
+}
