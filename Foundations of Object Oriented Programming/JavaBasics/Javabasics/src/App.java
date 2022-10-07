@@ -105,10 +105,10 @@ public class App {
 
         // Explicit Typecasting - When you intentionally have to typecast a value
         int x1 = 20;
-        // short x2 = x1;
+        short x2 = x1;
 
         // Type mismatch: cannot convert from int to short
-        // System.out.println(x2);
+        System.out.println(x2);
 
 
         // Intentionally typecast it 
