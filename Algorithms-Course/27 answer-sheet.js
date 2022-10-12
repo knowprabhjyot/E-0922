@@ -104,6 +104,10 @@ function reverse(str) {
 
 // Reverse str
 
+
+// let a = "awesome";
+// reverseUsingLoop(a); // emosewa
+
 function reverseUsingLoop(str) {
     let reverseStr = "";
 
@@ -113,6 +117,9 @@ function reverseUsingLoop(str) {
 }
 
 // reverseStr     i             str[i]
+// ""             6             a
+// "e"            5             m
+// "em"           4
 
 
 
@@ -148,11 +155,13 @@ console.log(isPalindrome("amanaplanacanalpanama")); // true
 let a = 2;
 let b = 3;
 
-// [1, 2] = [2, 1];
-[a,b] = [b,a];
+function swap(a, b) {
+  a = a + b;
+  b = a - b;
+  a = a - b;
+  console.log(a, b);
+}
 
-console.log(b); // 2
-console.log(a); // 3
 
 // A prime number is a positive integer that is only divisible by 1 and itself. For example, 2, 3, 5, 7, 11 are the first few prime numbers. Count the number of prime numbers less than a non-negative number, n
 // @param {number} n - the number to count primes up to
@@ -187,18 +196,9 @@ function isPrime(n) {
     return true;
 }
 
+
+
+
 console.log(countPrimes(10)); // 4
 console.log(countPrimes(0)); // 0
 console.log(countPrimes(1)); // 0
-
-
-// Write a function gets string value as parameter and returns a boolean value, if this string contain `gh` letter next to each other or not. use regex.
-// @param {string} str - the string to check
-function isGH(str) {
-    // your code here
-    // return true if the string contains gh next to each other
-    return /gh/.test(str);
-}
-
-console.log(isGH("Hey good night!")); // true
-console.log(isGH("Hey good morning!")); // false
