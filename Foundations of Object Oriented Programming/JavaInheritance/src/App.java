@@ -15,6 +15,9 @@ public class App {
         Car audi = new Car(1, 4, true, true, 4, 5, "40L", 8);
 
         System.out.println(audi.getWheels());
+
+        bike2.start();
+        audi.start();
     }
 
 }

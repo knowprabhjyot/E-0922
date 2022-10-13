@@ -51,5 +51,10 @@ public class Vehicle {
         this.speed += 5;
         System.out.println("Speed of Bike Now : " + this.speed);
     }
+
+
+    public void start() {
+        System.out.println("Vroom Vroom!");
+    }
     
 }

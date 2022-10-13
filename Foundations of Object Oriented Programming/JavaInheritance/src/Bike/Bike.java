@@ -24,5 +24,10 @@ public class Bike extends Vehicle {
         this.handle = handle;
     }
 
+    // Overriding the start method
+    public void start() {
+        System.out.println("BOOM BOOM!");
+    }
+
 
 }

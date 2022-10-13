@@ -47,4 +47,10 @@ public class Car extends Vehicle {
         this.ac = ac;
     }
 
+    // Overriding the start method
+    public void start() {
+        System.out.println("ZOOOOOOOOOM");
+    }
+
+
 }
