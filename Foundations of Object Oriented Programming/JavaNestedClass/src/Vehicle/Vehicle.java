@@ -5,10 +5,12 @@ public class Vehicle {
     private String engine;
     private String fuelTank;
 
+    // Default Constructor
     public Vehicle () {
 
     }
 
+    // Parameterized Constructor
     public Vehicle(String name, String engine, String fuelTank) {
         this.name = name;
         this.engine = engine;
@@ -21,6 +23,7 @@ public class Vehicle {
         private String partPrice;
     
 
+        // Parametrized constructor for VehiclePart
         public VehiclePart(String partName, String partPrice) {
             this.partName = partName;
             this.partPrice = partPrice;
@@ -48,5 +51,6 @@ public class Vehicle {
     public void getVehiclePart() {
         VehiclePart part1 = new VehiclePart("Steering", "$200");
         System.out.println(part1.partName);
+        System.out.println(part1.partPrice);
     }
 }

@@ -5,7 +5,6 @@ import Vehicle.Vehicle;
 public class Bike extends Vehicle {
 
     private String handle;
-    
     public String getHandle() {
         return handle;
     }
