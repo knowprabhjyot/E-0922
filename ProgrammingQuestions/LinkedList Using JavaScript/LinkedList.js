@@ -40,7 +40,13 @@ printNodeValues(node1);
 //  Question 1 - Count the number of nodes in Linked List
 
 function countNodes(head) {
-    // return count;
+    let count = 0;
+    while(head !== null) {
+        count++;
+        // Move node myself
+        head = head.next;
+    }
+    return count;
 }
 
 //  Question 2 - Add a new node to the linked list 
@@ -51,4 +57,59 @@ function addNewNode(head, val) {
 
     // console the final linked list
     // call printNodeValues
+    let current = head;
+
+
+    let newNode = new Node(val);
+
+    // This while means run the loop forever
+    while(true) {
+        current = current.next;
+        if (current.next === null) {
+            current.next = newNode;
+            break;
+        }
+    }
+
+    printNodeValues(head);
+
 }
+
+console.log(countNodes(node1));
+
+
+addNewNode(node1, 50);
+
+// Homework Quesiton 1
+
+// Write a function that deletes the node in the last index
+
+function deleteNodeLastIndex(head) {
+    // delete the last node
+
+    // PrintNodeValue(head)
+}
+
+// Write a function that deletes the node at the given index
+
+function deleteNodeAtIndex(head, n) {
+    // delete the node at n index
+
+    // printNodeValue(head)
+}
+
+
+
+// Write a function that deletes the node at the given index
+
+function addNodeAtIndex(head, n, val) {
+    // add the node at n index
+
+    // printNodeValue(head)
+}
+
+
+// printNodeValue(node1, 2, 25);
+// 10 -> 20 -> 30 -> 40 -> null
+
+// 10 --> 20 --> 25 --> 40 --> null
