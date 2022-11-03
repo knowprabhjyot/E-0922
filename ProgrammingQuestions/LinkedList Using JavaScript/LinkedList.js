@@ -113,3 +113,46 @@ function addNodeAtIndex(head, n, val) {
 // 10 -> 20 -> 30 -> 40 -> null
 
 // 10 --> 20 --> 25 --> 40 --> null
+
+
+// Find nth Node from end of the list
+function findNode(head, n) {
+    // console.log(the value from end upto n) 
+}
+
+
+// 10 --> 20 --> 25 --> 40 --> null
+
+
+// Print the nodes of the linked list in a reverse fashion
+function printNodeReverse(head) {
+    // console.log(the value from end upto n) 
+
+    // In this question you were only consoling the values
+}
+
+
+// 10 --> 20 --> 25 --> 40 --> null
+
+// Console.log
+// 40 --> 25 --> 20 --> 10
+
+
+// Return the sum of node values inside a linked list
+function SumOfNodeValues(head) {
+   // 95
+}
+
+
+// 10 --> 20 --> 25 --> 40 --> null
+
+
+ 
+// Return the reverse of the linked list (ADVANCE)
+function reverseLinkedList(head) {
+    // Orignal - 10 --> 20 --> 25 --> 40 ---> null
+    // Return reversed - 40 --> 25 --> 20 --> 10 --> null
+    // In this question 40 becomes the head
+    // if you want you can return the new head
+ }
+ 
