@@ -78,7 +78,7 @@ function addNewNode(head, val) {
 console.log(countNodes(node1));
 
 
-addNewNode(node1, 50);
+// addNewNode(node1, 50);
 
 // Homework Quesiton 1
 
@@ -106,6 +106,33 @@ function addNodeAtIndex(head, n, val) {
     // add the node at n index
 
     // printNodeValue(head)
+
+    let current = head;
+    let prev = head;
+    let newNode = new Node(val);
+    let count  = 0;
+
+    if (n < 0) {
+        return "Give a valid value";
+    }
+
+    if (count === n) {
+        newNode.next = head;
+        return newNode;
+    }
+
+    while(current.next) {
+        current = current.next;
+        count++;
+        if (count === n) {
+            prev.next = newNode;
+            newNode.next = current;
+            break;
+        }
+        prev = current;
+    }
+
+    return head;
 }
 
 
@@ -118,6 +145,8 @@ function addNodeAtIndex(head, n, val) {
 // Find nth Node from end of the list
 function findNode(head, n) {
     // console.log(the value from end upto n) 
+
+
 }
 
 
@@ -129,6 +158,13 @@ function printNodeReverse(head) {
     // console.log(the value from end upto n) 
 
     // In this question you were only consoling the values
+
+    if (head === null) {
+        return;
+    }
+    console.log(head.val + " --> ");
+    printNodeReverse(head.next);
+
 }
 
 
@@ -152,7 +188,28 @@ function SumOfNodeValues(head) {
 function reverseLinkedList(head) {
     // Orignal - 10 --> 20 --> 25 --> 40 ---> null
     // Return reversed - 40 --> 25 --> 20 --> 10 --> null
-    // In this question 40 becomes the head
+    // In this question 40 becomes the headv
     // if you want you can return the new head
+
+    let prev = null;
+    let current = head;
+
+    while(current) {
+        let tempNode = current.next;
+        current.next = prev;
+        prev = current;
+        current = tempNode;
+    }
+
+    return prev;
  }
  
+//  printNodeReverse(node1);
+
+//  let newNode = addNodeAtIndex(node1, 2, 11);
+
+//  printNodeValues(newNode);
+
+ let newHead = reverseLinkedList(node1);
+
+ printNodeReverse(newHead);
