@@ -15,7 +15,6 @@ node2.next = node3;
 node3.next = node4;
 
 
-
 // ES6
 // import Node from "./Node";
 
@@ -58,7 +57,6 @@ function addNewNode(head, val) {
     // console the final linked list
     // call printNodeValues
     let current = head;
-
 
     let newNode = new Node(val);
 
@@ -213,3 +211,22 @@ function reverseLinkedList(head) {
  let newHead = reverseLinkedList(node1);
 
  printNodeReverse(newHead);
+
+
+
+ // Q1 Find the middle of the linkedlist
+
+//  10 -> 20 -> 30 -> 40 -> 50  , Here middle is 30
+
+// 10 -> 20 -> 30 -> 40 , Return middle as n / 2 + 1
+
+
+// Advance Question
+// Q2 You have 2 sorted linked list, and you have to merge it into one,
+
+
+// 10 --> 40 --> 80 ---> 100 // L1
+
+// 20 --> 45 --> 60 --> 90 // L2
+
+// 10 --> 20 --> 40 --> 45 --> 60 --> 80 --> 90 --> 100
