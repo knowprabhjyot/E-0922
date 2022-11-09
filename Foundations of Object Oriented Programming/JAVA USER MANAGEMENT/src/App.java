@@ -53,7 +53,7 @@ public class App {
                     User user2 = userService.getByEmailAndPassword(email, password);
 
                     if (user2 != null) {
-                        System.out.print("Welcome " + user2.getName());
+                        System.out.println("Welcome " + user2.getName() + " " + user2.getLastname());
                     } else {
                         System.out.print("Invalid email or password ");
                     }
@@ -139,7 +139,12 @@ public class App {
     public static void displayUsers(List<User> users) {
         System.out.println("ID\tNAME\tLAST\tPASSWORD\tEMAIL");
         for (User user : users) {
-            System.out.println(user);
+            System.out.print(user.getId() + "\t");
+            System.out.print(user.getName() + "\t");
+            System.out.print(user.getLastname() + "\t");
+            System.out.print(user.getPassword() + "\t");
+            System.out.print(user.getEmail() + "\t");
+            System.out.println("\n");
         }
     }
 }
