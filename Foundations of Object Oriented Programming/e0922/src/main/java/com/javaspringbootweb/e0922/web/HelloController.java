@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     
     // http://localhost:8080/
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index() {
-        return "<h1>Hello</h1>";
-    }
+    // @RequestMapping(value = "/", method = RequestMethod.GET)
+    // public String index() {
+    //     return "<h1>Hello</h1>";
+    // }
 
-    // http://localhost:8080/about
-    @RequestMapping(value = "/about", method = RequestMethod.GET)
-    public String about() {
-        return "ABOUT PAGE";
-    }
+    // // http://localhost:8080/about
+    // @RequestMapping(value = "/about", method = RequestMethod.GET)
+    // public String about() {
+    //     return "ABOUT PAGE";
+    // }
 }
 
 
