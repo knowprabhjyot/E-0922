@@ -1,5 +1,6 @@
 package com.javaspringbootweb.e0922.web;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -40,6 +41,19 @@ public class AuthController {
         "<input type='submit' value='Register'/>" +
         "</form>";
     }
+
+    @RequestMapping(value="/order/{id}", method = RequestMethod.GET)
+    public String order(@PathVariable String id ) {
+        return "Your order ID is : " + id;
+    }
+
+
+    // Path variables are different from Request Params
+    // order/name/value
+
+
+    // RequestParams | Query Params
+    // order?name=value
     
 
 
