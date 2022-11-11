@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/product")
 public class ProductController {
     
-
+// http://localhost:8080/product
     @RequestMapping("/")
     public List<Product> products() {
         return Arrays.asList(
@@ -24,15 +24,10 @@ public class ProductController {
         );
     }
 
-
+    // http://localhost:8080/product/10
     @RequestMapping("/{id}")
     public Product getProductById(@PathVariable String id) {
-        System.out.println(id);
-        if (id == "1") {
-            return new Product(1, "Tshirt", "Top class Cotton Tshirts", 200.0);
-        }else {
-            return new Product(100, "Random", "Random Description", 200.0);
-        }
+        return new Product(1, "Tshirt", "Top class Cotton Tshirts", 200.0);
     }
 
 

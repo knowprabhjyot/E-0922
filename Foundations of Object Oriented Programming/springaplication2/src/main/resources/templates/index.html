@@ -1,0 +1,43 @@
+<html lang="en" xmlns:th="http://www.thmeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgb(169, 168, 168);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/create" method="POST">
+        <label>Full Name :</label>
+        <br>
+        <input type="text" th:field="${formData.fullName}">
+        <br>
+        <label>Age : </label>
+        <br>
+        <input type="number" th:field="${formData.age}">
+        <br>
+        <label>Employed : </label>
+        <br>
+        <input type="checkbox" th:field="${formData.employed}">
+        <br>
+        <label>Gender</label>
+        <br>
+        <p>
+            Male : <input type="radio" th:field="${formData.gender}" th:value="Male">
+            Female : <input type="radio" th:field="${formData.gender}" th:value="Female">
+        </p>
+        <br>
+        <input style="background-color: green; color: white; padding: 10px; border:none" type="submit" value="Submit">
+        <input  style="background-color: red; color: white; padding: 10px; border:none" type="reset" value="Reset">
+ 
+    </form>
+</body>
+
+</html>
