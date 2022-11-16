@@ -26,7 +26,37 @@
         </header>
     </nav>
 
-    <h1>HOME PAGE WHERE WE WILL SEE DATA</h1>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Hello Developer!</h1>
+            <p>This is the project management application</p>
+            <hr>
+        </div>
+
+        <h4>Current Projects</h4>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Project Stage</th>
+                    <th>Project Description</th>
+                </tr>
+
+            </thead>
+
+
+
+            <tbody>
+                <tr th:each="project: ${projects}">
+                    <th th:text="${project.name}"></th>
+                    <th th:text="${project.stage}"></th>
+                    <th th:text="${project.description}"></th>
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
 </body>
 
 </html>
