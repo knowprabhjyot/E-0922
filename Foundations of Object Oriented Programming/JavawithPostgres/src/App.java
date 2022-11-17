@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -22,9 +23,27 @@ public class App {
         Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
         Statement statement = connection.createStatement();
 
-        String INSERT_QUERY = "INSERT INTO employee_table (name, email) VALUES ('John', 'john@test.com')";
+        // String INSERT_QUERY = "INSERT INTO employee_table (name, email) VALUES ('Mike', 'mike@gmail.com')";
+// 
+        // statement.executeUpdate(INSERT_QUERY);
 
-        statement.executeUpdate(INSERT_QUERY);
+        // String DELETE_QUERY = "DELETE FROM employee_table WHERE ID = 2";
+
+        // statement.executeUpdate(DELETE_QUERY);
+
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM employee_table");
+
+
+        // Update a row in postgres
+
+
+
+        System.out.println("READ SUCCESFUL!");
+
+        while(resultSet.next()) {
+            System.out.print(resultSet.getString("name") + " | " + resultSet.getString("email"));
+        }
+
 
         System.out.println("Connected!");
 
