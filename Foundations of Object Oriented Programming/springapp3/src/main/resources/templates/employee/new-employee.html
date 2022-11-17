@@ -30,33 +30,30 @@
     </nav>
 
     <div class="container">
-        <form action="/project/save" method="POST">
+        <form action="/employee/save" method="POST">
             <fieldset>
-                <legend>New Project</legend>
+                <legend>New Employee</legend>
 
                 <div class="form-group mb-3">
-                    <label class="mb-3">Project name: </label>
+                    <label class="mb-3">Employee firstname: </label>
                     <br>
-                    <input class="form-control" type="text" placeholder="Type Project Name here!"
-                        th:field="${project.name}">
-                </div>
-
-
-                <div class="form-group mb-3">
-                    <label class="mb-3">Project Stage: </label>
-                    <br>
-                    <select name="" id="" class="form-control" th:field="${project.stage}">
-                        <option th:value="CANCELLED">CANCELLED</option>
-                        <option th:value="COMPLETED">COMPLETED</option>
-                        <option th:value="IN-PROGRESS">IN-PROGRESS</option>
-                    </select>
+                    <input  class="form-control" type="text" placeholder="Type First Name here!" th:field="${employee.firstName}">
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="">Project Description: </label>
+                    <label class="mb-3">Employee lastname: </label>
                     <br>
-                    <textarea class="form-control" th:field="${project.description}"></textarea>
+                    <input  class="form-control" type="text" placeholder="Type Last Name here!" th:field="${employee.lastName}">
                 </div>
+
+                <div class="form-group mb-3">
+                    <label class="mb-3">Employee Email: </label>
+                    <br>
+                    <input  class="form-control" type="email" placeholder="Type Email here!" th:field="${employee.email}">
+                </div>
+
+
+            
 
                 <button type="submit" class="btn btn-dark mt-3">Create!</button>
 
