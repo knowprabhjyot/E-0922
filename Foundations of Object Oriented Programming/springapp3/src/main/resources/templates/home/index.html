@@ -57,8 +57,35 @@
                     <th th:text="${project.description}"></th>
                 </tr>
             </tbody>
-            
+
         </table>
+
+        <hr>
+
+        <h4>Current Employees</h4>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Employee First Name</th>
+                    <th>Employee Last Name</th>
+                    <th>Employee Email</th>
+                </tr>
+
+            </thead>
+
+
+
+            <tbody>
+                <tr th:each="employee: ${employees}">
+                    <th th:text="${employee.firstName}"></th>
+                    <th th:text="${employee.lastName}"></th>
+                    <th th:text="${employee.email}"></th>
+                </tr>
+            </tbody>
+
+        </table>
+
     </div>
 </body>
 

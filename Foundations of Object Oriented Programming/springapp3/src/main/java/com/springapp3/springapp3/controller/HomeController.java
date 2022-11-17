@@ -7,7 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.springapp3.springapp3.dao.iEmployeeRepository;
 import com.springapp3.springapp3.dao.iProjectRepository;
+import com.springapp3.springapp3.entity.Employee;
 import com.springapp3.springapp3.entity.Project;
 
 @Controller
@@ -17,11 +19,16 @@ public class HomeController {
     @Autowired
     iProjectRepository projectRepository;
 
+    @Autowired
+    iEmployeeRepository employeeRepository;
+
 
     @GetMapping("/")
     public String displayHome(Model model) {
         List<Project> projects = projectRepository.findAll();
+        List<Employee> employees = employeeRepository.findAll();
         model.addAttribute("projects", projects);
+        model.addAttribute("employees", employees);
         return "home/index";
     }
 }

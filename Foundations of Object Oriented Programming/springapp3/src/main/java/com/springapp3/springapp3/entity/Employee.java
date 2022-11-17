@@ -1,9 +1,16 @@
 package com.springapp3.springapp3.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.JoinColumn;
 
 @Entity // This makes the table using JPA inside H2
 public class Employee {
@@ -15,6 +22,20 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String email;
+
+
+    @ManyToMany(cascade = {
+        CascadeType.MERGE,
+        CascadeType.REFRESH,
+        CascadeType.PERSIST
+    }, 
+    fetch = FetchType.LAZY
+    )
+    @JoinTable(name="project_employee",
+    joinColumns = @JoinColumn(name="employeeId"),
+    inverseJoinColumns = @JoinColumn(name="projectId"))
+    private List<Project> projects;
+
 
     public Employee() {
 
@@ -59,8 +80,21 @@ public class Employee {
         this.email = email;
     }
 
-    public String showFullName() {
+
+
+    // Why i am using to string method, becuase on html i will direct call employee object 
+    // and that will return this.firstName + this.lastName
+    @Override
+    public String toString() {
         return this.firstName + " " + this.lastName;
+    }
+
+    public List<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(List<Project> projects) {
+        this.projects = projects;
     }
 
 }
