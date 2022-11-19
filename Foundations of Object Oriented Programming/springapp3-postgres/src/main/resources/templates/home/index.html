@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head th:replace="layout :: head"></head>
+
+<body>
+    <nav th:replace="layout :: nav"></nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Hello Developer!</h1>
+            <p>This is the project management application</p>
+            <hr>
+        </div>
+
+        <h4>Current Projects</h4>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Project Stage</th>
+                    <th>Project Description</th>
+                    <th>Project Employees</th>
+                </tr>
+
+            </thead>
+
+
+
+            <tbody>
+                <tr th:each="project: ${projects}">
+                    <th th:text="${project.name}"></th>
+                    <th th:text="${project.stage}"></th>
+                    <th th:text="${project.description}"></th>
+                    <th th:text="${project.employees}"></th>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <hr>
+
+        <h4>Current Employees</h4>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Employee First Name</th>
+                    <th>Employee Last Name</th>
+                    <th>Employee Email</th>
+                </tr>
+
+            </thead>
+
+
+
+            <tbody>
+                <tr th:each="employee: ${employees}">
+                    <th th:text="${employee.firstName}"></th>
+                    <th th:text="${employee.lastName}"></th>
+                    <th th:text="${employee.email}"></th>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+              label: '# of Votes',
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+</body>
+
+</html>
