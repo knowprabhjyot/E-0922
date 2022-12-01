@@ -1,0 +1,83 @@
+
+body {
+    /* First font priority is given to poppins and the least priority is given to sans serif */
+    font-family: 'Poppins', sans-serif;
+}
+
+label {
+
+    /* Font properties */
+    font-style :italic;
+    font-weight: bolder;
+
+    /* Absolute Units - These fonts are hardcoded */
+    font-size: 16px; 
+
+
+    /* Relative Units - These fonts are related to either there parent, or itself */
+
+
+    /* First Way */
+    /* color: green; */
+
+    /* SECOND WAY (RGB) */
+
+    /* RGB (Red, Green, Blue)  */
+    /* Each individual value, can be minimum = 0, and maximum = 255 */
+
+    /* Maximum red */
+    /* color: rgb(255, 0, 0) */
+
+    /* color: rgb(255, 255, 255); */
+
+    /* color: rgb(0, 0 , 0); */
+
+    /* color: rgb(100, 100, 255); */
+
+    /* THIRD WAY (HEXA DECIMAL) */
+
+
+    /* color: #f10101; */
+
+    /* 0 1 2 3 4 5 6 7 8 9 a b c d e f */
+
+}
+
+
+input[type=submit] {
+    background-color: black;
+    padding: 6px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+input[type=text] {
+    padding: 4px;
+}
+
+img {
+    /* This is absolute or hardcoded */
+    /* width: 400px; */
+    /* height: 100px; */
+
+    /* THis is relative */
+
+    /* width: 40vw;
+    height: 40%; */
+
+    height: 100px;
+    width: 100px;
+}
+
+form {
+    width: 50%;
+    border: 4px solid white;
+
+    /* padding - Spaces within the element border */
+    padding: 50px;
+
+    /* margin - Spaces outside the element  */
+
+    margin: 50px;
+}
