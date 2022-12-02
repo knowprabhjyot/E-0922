@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- External css where we give the path of the file -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- This is internal CSS -->
+    <style>
+        body {
+            background-color: rgb(198, 194, 194);
+        }
+
+        form {
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+            <!-- Inline CSS, We are talking about giving css as style attribute -->
+
+    <form id="main-form" style="background-color: rgb(251, 172, 172)">
+       
+        <div class="text-center">
+             
+        <img id="logo"  src="https://plus.unsplash.com/premium_photo-1661914978519-52a11fe159a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="">
+
+        </div>
+
+        <div class="p-8">
+            <label class="p-8">First Name</label>
+            <input class="p-8 w-70"  type="text" placeholder="Enter first name here!">
+        </div>
+
+        <div class="p-8">
+            <label class="p-8">Last Name</label>
+            <input class="p-8 w-70" type="text" placeholder="Enter last name here!">
+        </div>
+
+        <div class="p-8">
+            <label class="p-8">Email</label>
+            <input class="p-8 w-70" type="email" placeholder="Enter email here">
+        </div>
+
+        <div class="p-8">
+            <label class="p-8">Gender</label>
+
+            <span class="p-8 w-70"> 
+                <span>Male</span>
+                <input class="p-8" type="radio" name="gender">
+                <span>Female</span>
+                <input class="p-8" type="radio" name="gender">
+            </span>
+        </div>
+
+        <div class="p-8">
+            <label class="p-8">Hobbies</label>
+            <span class="p-8">
+                <span>Travelling</span>
+                <input class="p-8" type="checkbox">
+
+                <span>Hiking</span>
+                <input class="p-8" type="checkbox">
+
+                <span>Reading</span>
+                <input class="p-8" type="checkbox">
+            </span>
+          
+        </div>
+
+        <div class="p-8">
+            <label class="p-8">DOB</label>
+            <input class="p-8 w-70" type="date" >
+        </div>
+
+        <div class="p-8">
+            <label class="p-8">Password</label>
+            <input class="p-8 w-70" type="password" placeholder="Enter Password Here!" >
+        </div>
+
+
+        <div class="p-8">
+            <label class="p-8">Upload Image</label>
+            <input class="p-8" type="file">
+        </div>
+<!-- 
+        <div class="p-8">
+            <label class="p-8">Age</label>
+            <input class="p-8" type="range" >
+        </div> -->
+
+
+        <div class="p-8">
+            <label class="p-8">Contact</label>
+            <input class="p-8 w-70" type="tel" name="" id="" placeholder="Enter Contact Here!">
+        </div>
+
+
+        <div class="text-center">
+            <input class="p-8" id="submit-button" type="submit" value="Submit Form">
+            <input class="p-8" id="reset-button" type="reset" value="Reset Form">
+        </div>
+
+    </form>
+</body>
+
+</html>
