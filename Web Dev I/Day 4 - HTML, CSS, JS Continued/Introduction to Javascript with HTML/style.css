@@ -1,0 +1,10 @@
+h1 {
+    color: red;
+}
+
+#myDiv {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+}
