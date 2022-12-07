@@ -4,7 +4,7 @@
 let userList = [];
 
 // Create user Object
-let newUser = {};
+let newUser = {}; // Because since its an object the reference was the same
 
 
 function setFirstName(event) {
@@ -52,6 +52,7 @@ function submitForm(event) {
     // actions which we didn't declare!
     event.preventDefault();
     console.log(newUser);
+
     userList.push(newUser);
 }
 
