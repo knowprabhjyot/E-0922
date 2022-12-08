@@ -1,0 +1,16 @@
+img {
+    width: 50%;
+}
+
+
+/* Target a particular breakpoint for mobile phone (480px), if the screen size goes below 480px do something */
+
+
+@media only screen and (max-width: 480px) {
+    /*When the screen size becomes lesser than 480px make the width to 100%  */
+    img {
+        width: 100%;
+    }
+}
+
+
