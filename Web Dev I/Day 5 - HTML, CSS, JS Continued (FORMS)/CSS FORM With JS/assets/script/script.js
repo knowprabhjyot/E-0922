@@ -221,3 +221,27 @@ function createShowListUserUIwithForIn() {
 
 // Write now the data will be replicated everytime with the last submitted value.
 // Because of pass by reference, which means the object that we are saving inside the array is pointing to the same object everytime!
+
+
+
+
+// First Way is using Append Child
+const mainHeading = document.getElementById("main-heading");
+
+
+// const h1heading = document.createElement("h1"); // <h1></h1>, this is not linked to the above variable yet
+
+// h1heading.textContent = "Please fill the form here!";
+
+// So we have to make h1 tag a child of mainHeading
+
+// mainHeading.appendChild(h1heading); // So this makes h1 tag a child of main Heading
+
+
+// Second Way is using innerHTML
+
+
+mainHeading.innerHTML = "<h1>Please fill the form here!</h1>"
+
+
+
