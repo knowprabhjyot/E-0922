@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+img {
+    /* width: 300px; */
+    border-radius: 20px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.container div {
+    /* display: inline-block; */
+    /* margin: 1em;
+
+    /* flex-basis: 25%; */
+
+}
+
+
+h1 {
+    text-align: center;
+}
+
+/* Mobile Phones */
+@media only screen and (max-width: 480px) {
+
+    .container {
+        justify-content: flex-start;
+
+    }
+
+    .container div {
+        flex-basis: 100%;
+        /* margin: 20px; */
+    }
+}
+
+/* Tables */
+
+@media only screen and (max-width: 600px) and (min-width: 481px) {
+
+    .container {
+        justify-content: flex-start;
+
+        gap: 0px;
+        margin: 20px;
+
+    }
+
+    .container div {
+        flex-basis: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) and (min-width: 481px) {
+
+    .container {
+        justify-content: flex-start;
+
+        gap: 0px;
+        margin: 20px;
+
+    }
+
+    .container div {
+        flex-basis: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 1280px) and (min-width: 601px) {
+
+    .container {
+        justify-content: flex-start;
+
+        gap: 0px;
+        margin: 20px;
+
+    }
+
+    .container div {
+        flex-basis: 25%;
+    }
+}
+
+
+@media only screen and (max-width: 1600px) and (min-width: 1281px) {
+
+    .container {
+        justify-content: flex-start;
+
+        gap: 8px;
+        margin: 20px;
+
+    }
+
+    .container div {
+        flex-basis: 15%;
+    }
+}
+
+
+
+

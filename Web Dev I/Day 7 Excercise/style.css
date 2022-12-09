@@ -1,0 +1,146 @@
+html, body{
+    background-color: #333333;
+    /* -changing background color of the page */
+    margin: 0;
+    /* -deleting default margin */
+}
+
+#logo, h1, h5 {
+    color: white;
+    /* - changing color of the logo and the specific heading */
+    margin: 12px 0;
+}
+
+#logo{
+    font-size: 16px;
+}
+
+header{
+    display: flex;
+    /* - changing header to flexbox to make it easier to align the logo and the navigation bar */
+    flex-direction: row;
+    /* - changing the direction of the flexbox to row */
+    justify-content: space-between;
+    /* - making the logo and the navigation bar to be aligned to the left and right of the header */
+    align-items: center;
+    /* - making the logo and the navigation bar to be aligned to the top and bottom of the header */
+    padding: 0 16px;
+    /* - adding padding to the header */
+}
+
+ul, li, nav{
+    display: inline;
+    /* - changing the navigation bar to inline to make it easier to align the navigation bar */
+}
+
+ul {
+    padding: 0;
+    /* - deleting default padding */
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    /* - deleting default underline */
+    padding: 0 8px;
+    /* - adding padding to the navigation bar */
+}
+
+a:hover{
+    color: orange;
+    background: #61616141;
+}
+
+article{
+   min-height: 250px;
+    /* - setting the minimum height of the article */
+   display: flex;
+    /* - changing the article to flexbox to make it easier to align the article */
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 12px 16px;
+}
+
+article:first-child{
+    background-image: url("https://images.unsplash.com/photo-1470246973918-29a93221c455?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80");
+    /* - adding background image to the first article */
+    background-size: cover;
+    /* - making the background image to cover the whole article */
+    background-position: center;
+    /* - making the background image to be centered */
+}
+
+article:first-child h1{
+    font-size: 38px;
+    text-align: center;
+}
+
+article:first-child button{
+    background-color: #333333;
+    color: white;
+}
+
+button{
+    border: none;
+    padding: 6px 10px;
+}
+
+p{
+    text-align: center;
+    color: white;
+}
+
+section{
+    min-height: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+}
+
+section p{
+    color: #333333;
+    margin: 12px 0;
+}
+
+h6{
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+i{
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+section:nth-child(even){
+    background-color: orange;
+}
+
+
+@media screen and (max-width: 425px) {
+    /* - media query for mobile devices includes max width of 425px
+    - it will work for mobile devices which has the width of 425px or less */
+    header{
+        height: auto;
+        /* - changing the height of the header to auto */
+        flex-direction: column;
+    }
+    ul, li, nav, a{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    a{
+        padding: 8px 0;
+    }
+
+    #logo{
+        margin: 16px 0 0 0;
+    }
+    
+
+}
