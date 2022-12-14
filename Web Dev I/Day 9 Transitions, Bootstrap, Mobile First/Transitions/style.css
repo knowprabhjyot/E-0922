@@ -1,0 +1,89 @@
+button:hover {
+    transform: rotate(60deg);
+    width: 300px;
+    background: green
+}
+
+
+button {
+
+    width: 120px;
+    height: 30px;
+    background: brown;
+    color: white;
+
+    /* Transitions  */
+    /* Transition is way to give change of state with smoothness */
+
+    /* Transition Delay */
+    /* Transition delay means start that transition after some given time */
+
+    transition-delay: 2s;
+
+    /* transition-delay: 1s; */
+
+
+    /* Transition duration */
+    /* How long the transition should go */
+
+    transition-duration: 4s;
+
+    /* transition-duration: 4s; */
+
+    /* Transition Property */
+    /* Transition property means apply the transition on the given specific transition */
+    /* transition-property: width, background, height; */
+
+    transition-property: transform, width, background;
+
+
+    /* Transition Timing Function */
+    /* transition-timing-function: linear; */
+
+    transition-timing-function: linear;
+
+
+
+
+}
+
+
+
+.block {
+    background-color: green;
+    width: 200px;
+
+
+    transition-delay: 2s;
+
+    /* transition-delay: 1s; */
+
+
+    /* Transition duration */
+    /* How long the transition should go */
+
+    transition-duration: 4s;
+
+    /* transition-duration: 4s; */
+
+    /* Transition Property */
+    /* Transition property means apply the transition on the given specific transition */
+    /* transition-property: width, background, height; */
+
+    transition-property: width, background-color;
+
+
+    /* Transition Timing Function */
+    /* transition-timing-function: linear; */
+
+    transition-timing-function: cubic-bezier(0.86, -0.05, 0, 0.7);
+
+    height: 300px;
+
+
+}
+
+.block:hover {
+    background-color: red;
+    width: 500px;
+}

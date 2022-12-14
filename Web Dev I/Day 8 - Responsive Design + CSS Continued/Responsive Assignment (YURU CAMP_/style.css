@@ -1,0 +1,150 @@
+body {
+    background-color: #333333;
+
+    /* Removig Default spacing given by browser */
+    margin: 0;
+}
+
+#logo, h1, h5 {
+    color: #fff;
+    margin: 12px 0;
+}
+
+
+
+header {
+
+    /* Converts into flex */
+    display: flex;
+
+
+    /* Places in oppposite corners */
+    justify-content: space-between;
+
+    align-items: center;
+    padding: 16px;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0 16px;
+}
+
+header ul li {
+    padding: 0 16px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header ul li:hover {
+    background-color: orange;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+section {
+    min-height: 300px;
+    background-color: white;
+    margin: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px 16px;
+}
+
+main section:first-child {
+    background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+main section:first-child button {
+    background-color: orange;
+    color: white;
+    padding: 8px 12px;
+}
+
+main section:first-child h1 {
+    font-size: 40px;
+}
+
+
+main section:first-child p {
+    color: white;
+}
+
+button {
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+}
+
+footer cite {
+    color: white;
+    padding: 8px 0px;
+}
+
+
+.lower-content i {
+    font-size: 40px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+
+section:nth-child(2) {
+    background-color: transparent;
+    color: white;
+}
+
+section:nth-child(2) h5 {
+    font-size: 40px;
+}
+
+section:nth-child(2) h5 span {
+    color: orange;
+}
+
+
+.lower-content:nth-child(even) {
+    background-color: orange;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    header , header nav ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        padding: 20px;
+    }
+
+    header nav ul li {
+        text-align: center;
+    }
+
+    main section:first-child {
+        margin: 0;
+    }
+
+}

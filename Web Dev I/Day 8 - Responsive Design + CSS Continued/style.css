@@ -1,0 +1,45 @@
+#main-div {
+    background-color: red;
+    width: 200px;
+    height: 300px;
+}
+
+#main-div:hover {
+    background-color: green;
+    width: 500px;
+    height : 400px;
+}
+
+table {
+    background-color: azure;
+    padding: 20px;
+}
+
+table tr td, table tr th {
+    border: 1px solid rgb(151, 149, 149);
+    padding: 20px;
+}
+
+
+tr:nth-child(even) {
+    background-color: red;
+    font-style: italic;
+}
+
+tr:nth-child(odd) {
+    background-color: green;
+    font-style:oblique
+}
+
+
+p:nth-of-type(2) { color: red; }
+
+
+span::before {
+    content: '♡';
+}
+
+#ptag::selection {
+   color: green;
+   /* font-size: 40px; */
+}

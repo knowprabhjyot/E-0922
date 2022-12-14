@@ -1,0 +1,30 @@
+.parent-container {
+    background-color: red;
+    height: 200vh;
+    position: relative;
+}
+
+.child-item-1 {
+    height: 100px;
+    background-color: green;
+
+    position: sticky;
+}
+
+
+.child-item-2 {
+    height: 100px;
+    background-color: yellow;
+
+    position: absolute;
+    left: 200px;
+}
+
+.child-item-3 {
+    height: 100px;
+    background-color: pink;
+
+    position: fixed;
+
+    bottom: 200px;
+}

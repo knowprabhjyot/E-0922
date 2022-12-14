@@ -1,0 +1,27 @@
+.block {
+    background-color: red;
+    height: 200px;
+    width: 300px;
+
+    /* For rotating an element clock wise */
+    /* transform: rotate(30deg); */
+
+
+    /* For changing the overall scaling of element */
+    /* transform: scale(2); */
+
+
+    /* transform: skew(20deg); */
+
+
+    /* For changing positions */
+    /* transform: translate(20px); */
+
+
+
+    /* transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()); */
+
+    
+
+
+}

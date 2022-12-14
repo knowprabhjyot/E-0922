@@ -1,0 +1,100 @@
+.block {
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    
+    /* Animation Time Duration */
+
+
+    /* Animation Delay */
+    animation-delay: 2s;
+
+    /* Animation Timing Function */
+    animation-duration: 5s;
+
+    /* Animation Iteration Count */
+    animation-iteration-count: infinite;
+
+    /* Animation Name */
+    /* animation-name: changeBackgroundColor; */
+}
+
+
+
+@keyframes changeBackgroundColor {
+    
+    0% {
+        background-color: red;
+    }
+
+    25% {
+       background-color: green; 
+    }
+
+    50% {
+        transform: rotate(60deg);
+        background-color: pink;
+    }
+
+    75% {
+        border-radius: 40px;
+        background-color: aqua;
+        border: 4px solid black;
+    }
+
+    100% {
+        transform: scale(2);
+    }
+
+
+    /* from {
+
+    }
+
+    to {
+
+    } */
+}
+
+
+.main-parent {
+    height: 400px;
+    background-color: red;
+    display: flex;
+
+    justify-content: center;
+}
+
+.bouncing-ball {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+
+    animation-name: bounce;
+
+    animation-iteration-count: infinite;
+
+    animation-duration: 2s;
+
+    border-radius: 50%;
+
+}
+
+
+@keyframes bounce {
+    
+    0% {
+        width: 40px;
+        height: 40px;
+        background-color: yellow;
+    }
+
+    50% {
+        height: 30px;
+        transform: translateY(370px);
+    }
+
+    100% {
+        background-color: aquamarine;
+    }
+}
