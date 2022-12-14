@@ -1,0 +1,41 @@
+h1 {
+    color :red;
+}
+
+
+h1 {
+    color: green;
+}
+
+section h1 {
+    color: orange;
+}
+
+
+div {
+    background-color: red;
+    height: 400px;
+    width: 400px;
+}
+
+.block2 {
+    background-color: magenta;
+    height: 200px;
+    width: 200px;
+}
+
+.block1 {
+    background-color: orange;
+    height: 200px;
+    width: 200px;
+}
+
+
+/* 
+
+
+#div1 {
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+} */
