@@ -1,0 +1,134 @@
+.container {
+    background-color: blanchedalmond;
+
+    border: 4px solid black;
+
+    margin: 20px;
+
+
+    display: flex;
+
+    height: 300px;
+
+    /* flex direction row is by default */
+
+
+    /* So it reverses in the opposite direction */
+    /* flex-direction: row-reverse; */
+
+    /* This makes the element go inside columns, meaning each item takes its own row */
+    /* flex-direction: column; */
+
+
+    /* Similar to flex direction row reverse, it also reverses */
+    /* flex-direction: column-reverse; */
+
+
+
+    /* JUSTIFY CONTENT *************** */
+
+    /* By default property */
+    /* justify-content: flex-start; */
+
+    /* So brings all the elements inside the center in main axis */
+    /* justify-content: center; */
+
+    /* Bring all the elements in the end */
+    /* justify-content: flex-end; */
+
+    /* Seperates out each item with equal spacing */
+    /* justify-content: space-between; */
+
+    /* Seperates evenly from the opposites and the center */
+    /* justify-content: space-evenly; */
+
+    /* Seperates evenly from the center and has different spacing in the end */
+    /* justify-content: space-around; */
+
+
+    /* Align Items *************** */
+
+    /* Which is by default */
+    /* align-items: stretch; */
+
+
+    /* This brings items in center in cross axi */
+    /* align-items: center; */
+
+
+    /* This brings items in end in cross axis */
+    /* align-items: flex-end; */
+
+
+    /* Flex wraps the element to the next row */
+    /* flex-wrap: wrap; */
+
+    /* flex-wrap: warp */
+
+
+    /* Gives spacing */
+    /* gap: 20px; */
+
+    /* column-gap: 20px; */
+
+    /* row-gap: 20px; */
+
+    /* align-content: center; */
+
+}
+
+
+.container .item {
+    /* flex-basis: auto; take the width based on content */
+
+
+    /* Short hand property for giving flex */
+    /* flex: flex-grow flex-shrink flex-basis; */
+
+    /* flex: 1; */
+    /* flex: 1 1 0; */
+
+    /* flex: 1 1 auto; */
+
+    /* flex: 1 2 400px; */
+
+    /* Flex grow fills out the remainign space if found */
+    /* Flex-grow: 1 */
+
+    /* Flex-shrink: 1 */
+
+    /* flex-shrink: 1; */
+
+    /* Flex-basis : 0 */
+    
+
+
+}
+
+.item1  {
+    background-color: red;
+    /* flex-grow: 2; */
+
+    /* flex-shrink: 1; */
+}
+
+.item2 {
+    background-color: orange;
+    /* flex-grow: 1; */
+
+    /* flex-shrink: 1; */
+}
+
+.item3 {
+    background-color: green;
+    /* flex-grow: 1; */
+    /* flex-shrink: 2; */
+}
+
+.item4 {
+    background-color: pink;
+}
+
+.item5 {
+    background-color: magenta   ;
+}
