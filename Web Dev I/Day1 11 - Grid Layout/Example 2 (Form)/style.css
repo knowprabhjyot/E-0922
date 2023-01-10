@@ -1,0 +1,32 @@
+form {
+    display: grid;
+
+    grid-template-columns: [label] auto [input] 1fr;
+
+    gap: 20px;
+
+    background-color: antiquewhite;
+
+    padding: 40px;
+
+}
+
+label {
+    grid-column: label;
+
+    grid-row: auto;
+}
+
+
+input, button{
+    grid-column: input;
+    grid-row: auto;
+    border: none;
+    padding: 10px 20px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
