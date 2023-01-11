@@ -1,0 +1,48 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul.listing {
+    display: grid;
+
+    padding: 0;
+
+    margin: 2em;
+
+    list-style-type: none;
+
+    /* Grid auto flow is another property for grid auto flow which will attempt to fill in the empty grid cells as long as it doesn't 
+    cause any overlap */
+    grid-auto-flow: dense;
+
+    /* Auto fill tells the browser to fill the grid with as many columns as possible based on the given size */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    gap: 20px;
+}
+
+.listing  > li {
+    border: 1px solid rgb(197, 197, 197);
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 8px;
+}
+
+
+.listing li  .header {
+    background-color: rgb(226, 146, 173);
+    padding: 4px 10px;
+    color: white;
+}
+
+.listing li .action {
+    background-color: black;
+    padding: 8px;
+    text-align: center;
+}
+
+.listing li .action a {
+    color :white;
+    text-decoration: none;
+    cursor: pointer;
+}

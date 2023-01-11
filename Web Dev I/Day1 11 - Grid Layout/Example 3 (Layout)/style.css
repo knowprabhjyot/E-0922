@@ -1,0 +1,110 @@
+body {
+
+    /* So this body will be our grid container */
+    display: grid;
+
+    grid-template-columns: 20% 1fr 10%;
+    grid-template-rows: 80px 1fr 70px;
+
+    /* header header header means we are saying it will take the whole first row */
+    /* nav main aside means we are dividing these into three sections */
+    /* footer footer footer means we are saying it will take the whole last row */
+    grid-template-areas: "header header header"
+        "nav main aside"
+        "footer footer footer";
+
+    /* To set the viewport to full screen so that the design doesn't overlap or adds a scrollbar */
+    height: 100vh;
+
+    margin: 0;
+
+    padding: 8px;
+    gap: 8px;
+}
+
+header,
+footer,
+nav,
+aside {
+    /* border: 1px solid rgb(86, 86, 86); */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+header {
+    grid-area: header;
+    background-color: rgb(242, 126, 126);
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(141, 141, 240);
+}
+
+nav {
+    background-color: rgb(137, 213, 137);
+    grid-area: nav;
+}
+
+aside {
+    background-color: rgb(200, 153, 243);
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 8px;
+    gap: 8px;
+}
+
+.block {
+    background-color: bisque;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+
+/* Media Queries to make design different in different screens */
+
+
+@media all and (max-width: 600px) {
+    body {
+        grid-template-areas: "header"
+            "main"
+            "aside"
+            "nav"
+            "footer";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr 80px 80px 80px;
+    }
+
+    .block {
+        background-color: aquamarine;
+    }
+}
+
+
+@media (max-width: 780px) and (min-width: 600px) {
+    .block {
+        background-color: rgb(245, 158, 158);
+    }
+
+    body {
+        grid-template-areas: "header header header"
+                             "nav main main"
+                             "footer footer footer"
+    }
+
+    aside {
+        display: none;
+    }
+}
