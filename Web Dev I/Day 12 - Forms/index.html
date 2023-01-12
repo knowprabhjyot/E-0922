@@ -1,0 +1,115 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Checkout Form for our Application</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam dolores quisquam voluptate fuga eius dolorem,
+        aperiam sint vero possimus consequuntur inventore eum ipsum mollitia neque quia deserunt obcaecati tempora!
+        Esse?
+    </p>
+
+    <div class="row">
+        <div class="col-75">
+            <form action="#">
+                <h3>Billing Address</h3>
+                <div class="row billing-container">
+
+                    <div class="col-50 ">
+
+
+                        <label for="fullNmae">Full Name</label>
+                        <input type="text" id="text" placeholder="Write your Full Name here!">
+
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Write your email here!">
+
+                        <label for="number">Contact</label>
+                        <input type="number" id="number" placeholder="Write your Number here!">
+
+                    
+
+                    </div>
+
+                    <div class="col-50">
+
+
+                        <label for="address">Address</label>
+                        <input type="text" id="address" placeholder="Write your address here!">
+
+                        <label for="city">City</label>
+                        <input type="text" id="city" placeholder="Write your City name here!">
+
+
+                        <label for="state">State</label>
+                        <input type="text" id="state" placeholder="Write your State name here!">
+
+                        <label for="zipCode">Zip Code</label>
+                        <input type="text" id="zipCode" placeholder="Write your State name here!">
+
+
+                    </div>
+
+
+                    <div class="col-50 payment-section" >
+                        <h3>Payment</h3>
+                        <label>Accepted Cards</label>
+
+                        <div class="icon-container">
+                            <i class="fa-brands fa-cc-mastercard" style="color: red;"></i>
+                            <i class="fa-brands fa-cc-visa" style="color: blue"></i>
+                            <i class="fa-brands fa-cc-amex" style="color: navy;"></i>
+                            <i class="fa-brands fa-cc-discover" style="color: red"></i>
+                        </div>
+
+                        <label for="cname">Name on Card</label>
+                        <input type="text" placeholder="Please enter name here!" id="cname">
+
+                        <label for="cnumber">Name on Card</label>
+                        <input type="number" placeholder="Please enter credit card number here!" id="cnumber">
+
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="expmonth">Expiry Month</label>
+                                <input type="number" placeholder="10">
+                            </div>
+
+                            <div class="col-50">
+                                <label for="expyear">Expiry Month</label>
+                                <input type="number" placeholder="2022">
+                            </div>
+
+                            <div class="col-50">
+                                <label for="cvv">CVV</label>
+                                <input type="number" placeholder="123">
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <label for="reciept">Do you want to recieve the reciept ?</label>
+                            <input type="checkbox" checked="checked">
+                        </div>
+
+                    </div>
+                </div>
+
+               
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
