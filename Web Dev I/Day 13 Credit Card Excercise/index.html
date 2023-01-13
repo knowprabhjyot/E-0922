@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <form onsubmit="submitForm(event)">
+            <div class="credit-card-front">
+                <div class="form-control">
+                    <input type="text" placeholder="Name of Person on Card" onkeyup="setName(event)">
+                    <i class="icon fa-solid fa-user"></i>
+                </div>
+
+                <div class="form-control">
+                    <input type="number" placeholder="Number on Card" onkeyup="setCardNumber(event)">
+                    <i class="icon fa-solid fa-credit-card"></i>
+                </div>
+
+
+                <div class="expiry-container">
+                    <label>Valid Through</label>
+
+                    <div class="expiry-number-container">
+                        <div class="form-control">
+                            <input type="text" placeholder="MM" onkeyup="setExpiryMonth(event)" maxlength="2">
+                        </div>
+
+                        <div class="form-control">
+                            <input type="text" placeholder="YY" onkeyup="setExpiryYear(event)" maxlength="4">
+                        </div>
+
+                        <div class="image-container">
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                            <i class="fa-brands fa-cc-visa"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="credit-card-back">
+
+                <div class="card-strip">
+
+                </div>
+
+
+                <div class="form-control">
+                    <input type="text" placeholder="CVV" onkeyup="setCVV(event)">
+                </div>
+
+            </div>
+
+
+            <div class="button-container">
+                <button>Send</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

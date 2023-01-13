@@ -1,0 +1,130 @@
+:root {
+    --card-width: 500px;
+    --card-height: 250px;
+    --background-color: #f0f0ed;
+    --border: 1px solid #b0b0b0;
+    --border-radius: 10px;
+    --borderThick: 2px solid #b0b0b0;
+    --strip-color: #8e8a86;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.credit-card-front, .credit-card-back {
+    width: var(--card-width);
+    height: var(--card-height);
+    background-color: var(--background-color);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+form {
+    position: relative;
+}
+
+.credit-card-front, .expiry-number-container, .expiry-container {
+    display: grid;
+}
+
+.credit-card-front {
+    position: absolute;
+    top: -30px;
+    right: 130px;
+}
+
+.container {
+    height: 100%;
+}
+
+
+.form-control, .image-container, .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    gap: 20px;
+}
+
+
+.expiry-number-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.expiry-number-container i {
+    font-size: 40px;
+}
+
+
+.form-control {
+    width: 100%;
+}
+
+
+.form-control input {
+    width: 100%;
+    padding: 10px;
+    border: var( --borderThick);
+    border-radius: var(--border-radius);
+}
+
+.fa-cc-mastercard {
+    color: red;
+}
+
+.fa-cc-visa {
+    color: blue;
+}
+
+.card-strip {
+    background-color: var(--strip-color);
+    height: 40px;
+}
+
+
+.credit-card-back .form-control {
+    height: calc(100% - 50px);
+    justify-content: flex-end;
+}
+
+.credit-card-back .form-control input {
+    width: 20%;
+}
+
+
+button {
+    background-color: var(--strip-color);
+    padding: 10px 20px ;
+    border: none;
+    border-radius: var(--border-radius);
+    width: 150px;
+    color: white;
+}
+
+
+.button-container {
+    text-align: center;
+    padding: 20px;
+}
+
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: 2px solid green;
+}
+
+
+.credit-card-front .form-control {
+    position: relative;
+}
+
+.credit-card-front .icon {
+    position: absolute !important;
+    right: 10px;
+}
