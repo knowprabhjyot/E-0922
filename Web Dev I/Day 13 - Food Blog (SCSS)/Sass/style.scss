@@ -23,6 +23,7 @@ header  {
             gap: 10px;
 
             text-align: $text-center;
+            list-style-type: none;
 
             li {
                 background-color: $primary;
@@ -59,7 +60,39 @@ header  {
             }
 
             p {
-                padding: 12px;
+                // padding: 12px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
             }
         }
     }
+
+
+.button-container {
+    text-align: right;
+
+    button {
+        background-color: $primary;
+        color: $white;
+        padding: 8px;
+        border: none;
+        margin: 8px;
+        border-radius: 2px;
+    }
+}
+
+// 
+// TABLET VIEW*****
+@media (min-width: 700px) {
+    @import "screens/tablet";
+}
+
+
+// 
+// DESKTOP VIEW*****
+@media (min-width: 1280px) {
+    @import "screens/desktop";
+}

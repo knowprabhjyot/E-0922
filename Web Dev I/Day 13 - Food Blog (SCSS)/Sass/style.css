@@ -18,6 +18,7 @@ header nav ul {
   flex-direction: column;
   gap: 10px;
   text-align: center;
+  list-style-type: none;
 }
 header nav ul li {
   background-color: brown;
@@ -45,5 +46,50 @@ header nav ul li {
   width: 100%;
 }
 .items-container .item p {
-  padding: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+.button-container {
+  text-align: right;
+}
+.button-container button {
+  background-color: brown;
+  color: white;
+  padding: 8px;
+  border: none;
+  margin: 8px;
+  border-radius: 2px;
+}
+
+@media (min-width: 700px) {
+  .items-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
