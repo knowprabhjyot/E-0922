@@ -45,3 +45,27 @@ body {
     height: calc(100vh - 100px);
     overflow: auto;
 }
+
+.radio-control {
+    background: azure;
+    position: fixed;
+    bottom: 100px;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+input[type="radio"] {
+    padding: 10px;
+}
+
+.date-container {
+    position: fixed;
+    bottom: 150px;
+    width: 100%;
+}
+
+.date-container input {
+    width: 100%;
+    padding: 20px;
+}
