@@ -58,7 +58,7 @@ let blockItem = document.querySelector('.block');
 
 blockItem.addEventListener('mouseover', changeBackground);
 
-// CHANGE THE BLOCK CSS BACK AGAIN WHEN THE MOUSEOUT event is fired
+// ASSIGNMENT - CHANGE THE BLOCK CSS BACK AGAIN WHEN THE MOUSEOUT event is fired and style property
 
 function changeBackground() {
     blockItem.style.background = "green";

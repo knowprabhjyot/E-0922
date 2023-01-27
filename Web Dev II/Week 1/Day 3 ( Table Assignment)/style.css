@@ -1,0 +1,16 @@
+.tableData {
+    border : 1px solid brown;
+    padding: 20px;
+    background-color: bisque;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+.tableHeading {
+    border : 1px solid rgb(158, 158, 158);
+    padding: 20px;
+    background-color: black;
+    border-radius: 8px;
+    margin: 4px;
+    color: white;
+}
