@@ -1,16 +1,16 @@
 
 body {
-    background-color: rgb(174, 174, 174);
+    background-color: #036060;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .form-control {
     display: grid;
     grid-template-columns: 70% 30%;
     position: fixed;
-    bottom: 20px;
+    bottom: 0px;
     width: 100%;
-    gap: 20px;
 }
 
 .form-control input {
@@ -36,9 +36,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
 
+
+.form-control button {
+    background: #08c6c6;
+    border: none;
+}
 
 
 .list-container {
@@ -49,10 +55,14 @@ body {
 .radio-control {
     background: azure;
     position: fixed;
-    bottom: 100px;
+    bottom: 70px;
     display: flex;
     width: 100%;
     padding: 20px;
+}
+
+.radio-control label {
+    padding-left: 20px;
 }
 
 input[type="radio"] {
@@ -61,11 +71,15 @@ input[type="radio"] {
 
 .date-container {
     position: fixed;
-    bottom: 150px;
+    bottom: 140px;
     width: 100%;
 }
 
 .date-container input {
     width: 100%;
     padding: 20px;
+}
+
+input {
+    border: none;
 }

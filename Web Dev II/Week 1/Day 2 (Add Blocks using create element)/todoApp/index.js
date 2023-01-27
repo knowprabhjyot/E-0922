@@ -99,9 +99,18 @@ function showList() {
 
 
         // {title: "Task 1"} // for index  0 , this will taskList[0]
+        let pTitle = document.createElement("p");
 
-        listItem.textContent = taskList[i].title;
+        pTitle.textContent = taskList[i].title;
+        pTitle.style.fontSize = "24px";
+
+        listItem.appendChild(pTitle);
         
+        let p = document.createElement('p');
+        p.setAttribute("id", taskList[i].title);
+        p.textContent = taskList[i].completionDate;
+
+        listItem.appendChild(p);
         listContainer.appendChild(listItem);
     }
 }
@@ -109,6 +118,10 @@ function showList() {
 function setDate(event) {
     newTask.completionDate = event.target.value;
 }
+
+
+// Just like I added the TITLE, in the same UI, You should also add
+// priority "High" or "Low"
 
 // Scope for tomorrow
 // Don't allow to add similar tasks
