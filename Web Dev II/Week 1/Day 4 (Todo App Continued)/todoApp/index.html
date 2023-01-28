@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="content"></div>
+
+    <div class="list-container">
+        <ul id="list">
+        
+        </ul>
+    </div>
+
+    <form onsubmit="addTask(event)"> 
+        <div class="form-control" >
+            <input id="taskItem" type="text" placeholder="Add Task">
+            <button>Add</button>
+        </div>
+
+        <div class="date-container">
+            <input type="date" onchange="setDate(event)">
+        </div>
+
+        <div class="radio-control">
+            <label for="high">High</label>
+            <input name="xyz" type="radio" id="high" value="high" onchange="selectPriority(event)">
+    
+            <label for="low">Low</label>
+            <input name="xyz" type="radio" id="low" value="low" onchange="selectPriority(event)">      
+        </div>
+    </form>
+</body>
+
+</html>
