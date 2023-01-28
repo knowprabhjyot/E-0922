@@ -134,7 +134,66 @@ let student = {
 }
 
 
+// String Template Literals
 
+let collegeName = "CICCC";
+
+let student = "This student studies in " + collegeName; // Concatenation
+
+let studentWithLiteral = `This student studies in ${collegeName} `; // Template Literal
+
+
+// First Class Functions / Function Expressions ************
+
+// They also don't get hoisted, even if they are using function keyword
+// Those functions which are treated as variables
+
+let multplication = function(a, b) {
+    return a * b;
+}
+
+// Higher Order Functions / Function Expressions ************
+// Higher order functions are those functions which either return a function or takes a parameter as a function
+ 
+function sumIfy(a) { // First function that takes first parameter
+    return function(b) { // Second Function takes second parameter
+        return a + b; // this is the output based on both parameters
+    }
+}
+
+let output = sumIfy(4)
+
+let finalOutput = output(8);
+
+
+// ANOTHER EXAMPLE
+
+function greeting(firstName) {
+    return function(lastName) {
+        console.log(`Hey ${firstName} ${lastName}`);
+    }
+}
+
+let greetingFirstOutput = greeting("Daniel");
+
+greetingFirstOutput("Aucur"); // Daniel Aucur
+
+
+
+// // ForEach loop ?
+
+// let array = [1,2,3,4];
+
+// array.forEach(function(item) {
+//     console.log(item);
+// })
+
+
+
+// HIGHER ORDER FUNCTIONS WHICH ARE ALREADY EXISTING IN JS ES6 -->
+    // Filter HOF
+    // MAP HOF
+    // REDUCE HOF
 
 
 // ES7

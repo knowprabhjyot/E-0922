@@ -3,6 +3,8 @@
 // By default there are no tasks
 let taskList = [];
 
+let taskListCopy=  []; // 
+
 let newTask = {}; // By default empty; 
 
 // ['eat dinner', 'go for shopping']
@@ -64,6 +66,9 @@ function addTask(event) {
         // We are creating a new object with a new memory
  
         taskList.push(modifiedTask); // We will push object now
+
+
+        taskListCopy = JSON.parse(JSON.stringify(taskList));
 
         taskItem.value = "";
 
@@ -139,6 +144,23 @@ function setDate(event) {
 }
 
 
+function searchTasks() {
+    let searchKeyword= document.getElementById('search-input');
+    console.log(searchKeyword.value);
+
+    taskList = taskListCopy; // Revise the taskList to the orignal Array
+
+    let modifiedTaskList = taskList.filter((task) => {
+        if (task.title.includes(searchKeyword.value)) {
+            return true;
+        }
+    })
+
+    taskList = modifiedTaskList;
+
+    showList();
+}
+
 // Just like I added the TITLE, in the same UI, You should also add
 // priority "High" or "Low"
 
@@ -148,3 +170,10 @@ function setDate(event) {
 // also add a priority list and show the UI based on that
 // Complete a task
 // Deploy IT
+
+
+
+// Your assignment is to make the application better in UI
+// You have to improve or generalize common code
+// Whosoever does the best changes by monday
+// I will continue on their applicaiton and we will learn drag and drop event
