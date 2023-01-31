@@ -128,6 +128,22 @@ let employeeEligibleGratuity  = modifiedEmployeeList.map((employee) => {
     }
 });
 
-console.log(employeeEligibleGratuity);
+// console.log(employeeEligibleGratuity);
 
 // console.log(employeeWithGratuity);
+
+
+// EMPLOYEE NAMES 
+
+let employeeWithNames = modifiedEmployeeList.map((employee) => {
+    return employee.name;
+})
+
+let employeeWithNameAndEmail = modifiedEmployeeList.map((employee) => {
+    return {
+        name: employee.name,
+        email: employee.email
+    }
+})
+
+console.log(employeeWithNameAndEmail);

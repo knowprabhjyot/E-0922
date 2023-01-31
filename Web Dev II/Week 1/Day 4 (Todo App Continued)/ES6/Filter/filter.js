@@ -126,7 +126,7 @@ let employeeList = [
 ]
 
 
-let honourEmployees = employeeList.filter((employee) => {
+let honourEmployees = employeeList.filter((employee, index) => {
     let currentYear = new Date().getFullYear(); // 2023
     // 2023 - 2008 = 15
     if (currentYear - employee.dateJoined >= 10 && currentYear - employee.dateJoined < 15) {
