@@ -161,7 +161,7 @@ function sumIfy(a) { // First function that takes first parameter
     }
 }
 
-let output = sumIfy(4)
+let output = sumIfy(4);
 
 let finalOutput = output(8);
 
