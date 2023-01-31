@@ -96,16 +96,3 @@ console.log(output);
 function minimumValue(array) {
     return array.reduce()
 }
-
-// Write a function that filters an array based on the elements which contains the keyword buzz
-
-let array = ['fizz', 'fizzbuzz', 'buzzfizz', 'fiz', 'buzz', 'buzzFizz'];
-
-// output array = ['fizzbuzz', 'buzzfizz', 'buzz', 'buzzFizz']
-
-// There are two types of exams - ObjectiveBased , SubjectiveBased
-
-// ObjectiveBased means - only MCQ (multiplechoice) questions 
-
-// SubjectiveBased, where you have tell in text why are you doing this. For example , I might ask what is Es6 ? And how it is different than other language
-// It will also have some coding questions (FRIDAY WILL BE WHOLE DAY SUBJECTIVE EXAM)
