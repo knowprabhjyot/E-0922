@@ -176,3 +176,39 @@ Promise.race(promisesArray).then((data) => {
 }).catch((error) => {
     console.log(error);   
 })
+
+
+
+// ASYNC AWAIT **************************** (ES7)
+
+
+
+let amounts = 1000;
+
+let promises1 = new Promise((resolve, reject) => {
+    console.log("Trying transaction, for downpayment of amount $8000");
+
+    if ((amounts - 8000) > 0) {
+        resolve({
+            message: "Succesfully Approved!",
+            balance: amounts - 8000
+        })
+    } else {
+        reject({
+            message: "Transaction Denied!",
+            balance: amounts
+        })
+    }
+})
+
+
+async function checkTransactions() {
+    try {
+        let output = await promises1;
+        console.log(output, "OUTPUT");
+    } catch(error) {
+        console.log(error);
+    }
+}
+
+checkTransactions();
