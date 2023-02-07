@@ -1,0 +1,38 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.container {
+    background-color: #15bcf3;
+    height: 100vh;
+}
+
+h1 {
+    margin: 0;
+}
+
+section:nth-child(1) {
+    display: grid;
+    height: 90vh;
+}
+
+section:nth-child(2) {
+    display: grid;
+    background-color: black;
+    color: white;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+}
+
+section:nth-child(2) p {
+    text-align: center;
+    font-size: 16px;
+}
+
+i {
+    font-size: 250px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
