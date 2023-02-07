@@ -31,9 +31,14 @@ const createUI = (data) => {
 
     cityName.textContent = data.name;
     temperature.textContent = data.main.temp;
-    feelsLike.textContent = data.main.feels_like;
-    humidity.textContent = data.main.humidity; 
-    visibility.textContent = data.visibility;
+
+    humidity.innerHTML = `<p class="secondSectionTitle">Humidity</p><p>${data.main.humidity}<p>`;
+
+    visibility.innerHTML = `<p class="secondSectionTitle">Visibility</p><p>${data.visibility}</p>`
+
+    feelsLike.innerHTML = `<p class="secondSectionTitle">Feels Like</p><p>${data.main.feels_like}</p>`
+
+
     description.textContent = data.weather[0].description;
 
     // First SECTION

@@ -3,8 +3,12 @@ body {
     margin: 0;
 }
 
+:root {
+    --primary: #15bcf3
+}
+
 .container {
-    background-color: #15bcf3;
+    background-color: var(--primary);
     height: 100vh;
 }
 
@@ -13,21 +17,35 @@ h1 {
 }
 
 section:nth-child(1) {
-    display: grid;
-    height: 90vh;
+    /* display: grid; */
+    height: 60vh;
+
+    text-align: center;
+}
+
+section:nth-child(1) span {
+    font-size: 96px;
+    font-weight: bold;
+}
+
+section:nth-child(1) p {
+    margin-top: 0;
 }
 
 section:nth-child(2) {
     display: grid;
-    background-color: black;
     color: white;
     grid-template-columns: repeat(3, 1fr);
     padding: 20px;
+    gap: 20px;
+    height: 150px;
 }
 
 section:nth-child(2) p {
     text-align: center;
     font-size: 16px;
+    background-color: black;
+    border-radius: 20px;
 }
 
 i {
@@ -35,4 +53,9 @@ i {
     width: 100%;
     text-align: center;
     color: white;
+}
+
+.secondSectionTitle {
+   color:  var(--primary);
+   font-weight: bold;
 }
