@@ -45,6 +45,9 @@ getQuote().then((quote) => {
 });
 // after this line,
 
+async function getQuotes() {
+  const data = await getQuote();
+}
 ```
   
 ###### 8- Convert this code to arrow function.

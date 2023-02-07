@@ -1,0 +1,24 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+article {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+img {
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+article div {
+    padding: 12px;
+}
