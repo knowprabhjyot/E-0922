@@ -1,0 +1,73 @@
+
+:root {
+    --primary: blue;
+    --secondary: rgb(235, 235, 235);
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.user-searched {
+    background-color: var(--secondary);
+    height: 400px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 300px;
+    margin-left: 20px;
+    margin: auto;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+    background-color: black;
+}
+
+
+.search-container input {
+    padding: 20px;
+    width: 400px;
+    border: none;
+}
+
+.search-container button {
+    padding: 20px;
+    width: 150px;
+    background-color: blanchedalmond;
+    border: none;
+}
+
+.user-followers {
+    display: flex;
+    overflow: auto;
+    gap: 20px;
+}
+
+.user-followers div {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    min-width: 200px;
+    margin: 20px;
+    text-align: center;
+}
+
+.user-followers div img {
+    border-radius: 50%;
+    width: 50%;
+}

@@ -17,9 +17,11 @@ let weatherData;
 
 const createUI = (data) => {
     const container = document.getElementById('container');
+    container.innerHTML = ""; // This empty's whatever was there
     const cityName = document.createElement('h1');
     const image = document.createElement('div');
-    image.innerHTML = "<i class='fa-solid fa-cloud'></i>";
+
+
     const temperature = document.createElement('span');
     const description = document.createElement('p');
     const feelsLike = document.createElement('p');
@@ -28,6 +30,12 @@ const createUI = (data) => {
     const firstSection = document.createElement('section');
     const secondSection = document.createElement('section');
 
+    console.log(data.weather[0].description);
+    if (data.weather[0].description == "light rain") {
+        image.innerHTML = "<i class='fa-solid fa-cloud-showers-heavy'></i>"
+    } else {
+        image.innerHTML = "<i class='fa-solid fa-cloud-sun'></i>";
+    }
 
     cityName.textContent = data.name;
     temperature.textContent = data.main.temp;
@@ -55,11 +63,11 @@ const createUI = (data) => {
 }
 
 
-const fetchWeatherData = async () => {
+const fetchWeatherData = async (city) => {
     let { apiKey, unit } = configuration; 
 
     try {
-        const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=vancouver&appid=${apiKey}&units=${unit}`);
+        const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`);
         const jsonData = await data.json();
         weatherData = jsonData;
 
@@ -70,5 +78,12 @@ const fetchWeatherData = async () => {
     }
 }
 
+const fetchDataOnSearch = async () => {
+    const search = document.getElementById('search-input');
+    console.log(search.value);
 
-fetchWeatherData();
+    fetchWeatherData(search.value);
+}
+
+
+fetchWeatherData('Vancouver');

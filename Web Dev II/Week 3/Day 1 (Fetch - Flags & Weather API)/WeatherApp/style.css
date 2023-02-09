@@ -1,14 +1,15 @@
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    background-color: var(--primary);
 }
 
 :root {
-    --primary: #15bcf3
+    --primary: #15bcf3;
+    --secondary: #0c8fbb;
 }
 
 .container {
-    background-color: var(--primary);
     height: 100vh;
 }
 
@@ -58,4 +59,24 @@ i {
 .secondSectionTitle {
    color:  var(--primary);
    font-weight: bold;
+}
+
+
+.search-container {
+    background-color: var(--secondary);
+    padding: 20px;
+}
+
+.search-container input {
+    padding: 20px;
+    width: 50%;
+    border: none;
+}
+
+.search-container button {
+    width: 30%;
+    padding: 20px;
+    background-color: black;
+    color: var(--primary);
+    border: none;
 }
