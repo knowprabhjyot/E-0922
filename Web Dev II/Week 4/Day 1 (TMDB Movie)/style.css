@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+    color: white;
+}
 
 .flex-container {
     display: flex;
@@ -8,5 +12,26 @@
 }
 
 img {
-    width: 200px;
+    width: 50%;
+    margin: auto;
+}
+
+.banner-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    color: white;
+
+}
+
+.row:before {
+    display: none;
+}
+
+
+section .container {
+    padding: 40px;
 }
