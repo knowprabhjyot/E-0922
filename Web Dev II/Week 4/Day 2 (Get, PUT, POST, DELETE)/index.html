@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- AXIOS JS STARTS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.3/axios.min.js"
+      integrity="sha512-wS6VWtjvRcylhyoArkahZUkzZFeKB7ch/MHukprGSh1XIidNvHG1rxPhyFnL73M0FC1YXPIXLRDAoOyRJNni/g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- AXIOS JS ENDS -->
+   
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <h1>SIGNUP PAGE!</h1>
+        <form onsubmit="submitForm(event)">
+            <div class="form-control">
+                <label for="Email">Email</label>
+                <input id="email" type="text" placeholder="Enter Email Here!">
+            </div>
+
+            <div class="form-control">
+                <label for="Password">Password</label>
+                <input  id="password" type="password" placeholder="Enter Password Here!">
+            </div>
+
+            <button type="submit">Signup</button>
+        </form>
+
+        <div id="allUsers" class="all-users">
+
+        </div>
+
+    </section>
+
+
+      
+</body>
+
+</html>

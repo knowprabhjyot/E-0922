@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+#allUsers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#allUsers div {
+    border: 1px solid white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

@@ -10,6 +10,11 @@ let topRatedMovies = [];
 // Using this array for Banner
 let upcomingMovies = [];
 
+// Register Plugin for scroll trigger
+gsap.registerPlugin(ScrollTrigger);
+
+
+
 
 // URLS
 const TRENDING_MOVIES_URL = `${config.baseUrl}/trending/all/day?api_key=${config.apiKey}`;
@@ -42,6 +47,10 @@ const manipulateArray = (data) => {
   });
 };
 
+const showBannerModal = () => {
+  alert("Hello");
+};
+
 const generateBannerUI = async (data) => {
   const slidesContainer = document.getElementById("glidesSlides"); // ul
   slidesContainer.innerHTML = "";
@@ -57,6 +66,8 @@ const generateBannerUI = async (data) => {
     const img = document.createElement("img");
     img.src = movie.posterUrl;
 
+    img.width = "80%";
+
     const textContainer = document.createElement("div");
 
     const title = document.createElement("h1");
@@ -64,7 +75,20 @@ const generateBannerUI = async (data) => {
 
     const description = document.createElement("p");
     description.textContent = movie.description;
-    textContainer.append(title, description);
+
+    // Trailer Button
+    const trailerButton = document.createElement("div");
+
+    trailerButton.innerHTML = `<button data-toggle="modal" data-target="#exampleModal"  class="trailer-button">Play Trailer</button>`;
+    // trailerButton.textContent = "Play Trailer";
+
+    // trailerButton.classList.add('trailer-button');
+
+    // trailerButton.addEventListener('click', () => {
+    //     alert("hi");
+    // });
+
+    textContainer.append(title, description, trailerButton);
 
     div.classList.add("banner-container");
     div.append(img, textContainer);
@@ -84,14 +108,13 @@ const generateBannerUI = async (data) => {
     new Glide(".glide", {
       type: "carousel",
       startAt: 0,
-      autoplay: 4000,
+      //   autoplay: 4000,
       hoverpause: false,
       gap: 5,
       perView: 1,
     }).mount();
   });
 };
-
 
 /**
  *
@@ -102,6 +125,7 @@ const generateSectionUI = (array, container) => {
   console.log(array);
   array.forEach((movie) => {
     const li = document.createElement("li");
+    li.classList.add('card-container');
     const img = document.createElement("img");
     const title = document.createElement("h6");
     title.textContent = movie.title;
@@ -197,3 +221,23 @@ const searchMovie = async () => {
 };
 
 loadResources();
+
+
+
+// GSAP ANIMATIONS
+
+gsap.from(".title_trending", {
+    duration: 1,
+    scrollTrigger: ".title_trending",
+    opacity: 0,
+    x: -60
+})
+
+
+gsap.from(".card-container", {
+    duration: 1,
+    scrollTrigger: ".card-container",
+    opacity: 0,
+    x: -60
+})
+
