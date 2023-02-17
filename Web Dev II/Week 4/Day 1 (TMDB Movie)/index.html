@@ -10,24 +10,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
-
-    <!-- GLIDE CSS STARTS -->
+    <!-- GLIDE CSS STARTS, because we want to use the sliders -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css" />
     <!-- GLIDE CSS ENDS -->
 
-
-
-
     <link rel="stylesheet" href="style.css">
-
-
 
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
 
+        <!-- Navigation Bar starts -->
         <nav class="navbar navbar-default">
             <div class="flex-container justify-space-between">
 
@@ -42,43 +37,77 @@
                 </ul>
             </div>
         </nav>
+        <!-- Navigation Bar Ends -->
 
 
+        <!-- Banner starts here -->
         <section id="banner">
             <div class="container-fluid glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides" id="glidesSlides">
-
+                        <!-- We are showing Upcoming movies here! -->
                     </ul>
-
                 </div>
-
             </div>
-            
+        </section>
+        <!-- Banner ends here -->
+
+
+        <section id="search-container">
+            <input type="text" id="search-input" placeholder="Please search a movie here!">
+            <button class="search-button" onclick="searchMovie()">Search</button>
+        </section>
+
+        <section id="searched-movies-main" class="display-none">
+            <h1 class="title_trending">Searched Movies</h1>
+            <div id="glide-section4">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides" id="searchedMoviesUL">
+                        <!-- Generate Searched  Movies Here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Trending Movies Section  starts here -->
+        <section class="trending_container">
+            <h1 class="title_trending">Trending</h1>
+            <div id="glide-section1">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides" id="trendingMovies">
+                        <!-- Generate Tending Movies Here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Trending Movies Section Ends here -->
+
+
+        <section>
+            <h1 class="title_trending">Popular Movie</h1>
+            <div id="glide-section2">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides" id="popularMovies">
+                        <!-- Generate Li tag -->
+                    </ul>
+                </div>
+            </div>
         </section>
 
 
         <section>
-            <h1>Trending</h1>
-            <div class="glide-section">
+            <h1 class="title_trending">Top Rated Movie</h1>
+            <div id="glide-section3">
                 <div class="glide__track" data-glide-el="track">
-                  <ul class="glide__slides" id="trendingMovies">
-                   <!-- Generate Li tag -->
-                  </ul>
+                    <ul class="glide__slides" id="topRatedMovies">
+                        <!-- Generate Li tag -->
+                    </ul>
                 </div>
-              </div>
+            </div>
         </section>
 
-        <section>
-            <h1>Popular Movie</h1>
-            <div class="glide-section2">
-                <div class="glide__track" data-glide-el="track">
-                  <ul class="glide__slides" id="popularMovies">
-                   <!-- Generate Li tag -->
-                  </ul>
-                </div>
-              </div>
-        </section>
+
 
 
         <!-- AXIOS JS STARTS -->
