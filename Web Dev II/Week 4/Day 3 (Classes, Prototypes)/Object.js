@@ -74,3 +74,26 @@ obj.setName = "Daniel";
 // to the prototype of the new object created.
 let newMovieObj = Object.create(movieObject)
 
+
+
+let object = {
+    name : "Prabh",
+    email: "prabh@ciccc.ca"
+}
+
+// It will extract the keys and convert it into an array
+Object.keys(object) // ['name', 'email']
+
+// It will extract the values and convert it into an array
+Object.values(object);
+
+// This will extract the keys and values together
+Object.entries(object); // [['name', 'Prabh'], ['email', 'prabh@ciccc.ca'] ]
+
+
+// Try to write the polyfill for Object.entries
+
+// Object.prototype.entries = function(object) {
+
+// }
+

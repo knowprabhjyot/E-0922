@@ -95,3 +95,17 @@ Array.prototype.filterify = function(callback) {
 
 // Try to write down the polyfill for Foreach function
 
+if (!Array.prototype.forEachify) {
+    Array.prototype.forEachify = function(cb) {
+        const array = this;
+        for (let i = 0 ; i < array.length;i++) {
+            cb(array[i], i);
+        }
+    }
+}
+
+let forLoop = [1,2,3,4,5];
+
+forLoop.forEachify((item) => {
+    console.log(item);
+})
