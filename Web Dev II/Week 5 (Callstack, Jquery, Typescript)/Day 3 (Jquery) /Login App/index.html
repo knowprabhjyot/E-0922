@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>Login & Register</h1>
+            <div class="tab">
+                <button data-tab="login" class="tablinks active">Login</button>
+                <button data-tab="register" class="tablinks">Register</button>
+            </div>
+
+            <form id="login" class="tabcontent" style="display: block;">
+                <h2>Login Form</h2>
+
+                <label for="loginEmail">Email: </label>
+                <input type="text" id="loginEmail" name="loginEmail" placeholder="Enter Email">
+                <span id="emailError" class="error"></span>
+
+                <label for="loginPassword">Password</label>
+                <input type="password" name="loginPassword" id="loginPassword" placeholder="Enter Password">
+                <span id="passwordError" class="error"></span>
+
+                <button type="submit" class="action-btn">Login</button>
+
+            </form>
+
+            <form id="register" class="tabcontent">
+                <h2>Register Form</h2>
+
+                <label for="registerName">Full name: </label>
+                <input type="text" id="registerName" name="registerNAme" placeholder="Enter Name">
+
+                <label for="registerEmail">Email: </label>
+                <input type="text" id="registerEmail" name="registerEmail" placeholder="Enter Email">
+                <span id="registerEmailError" class="error"></span>
+
+                <label for="registerPassword">Password</label>
+                <input type="password" name="registerPassword" id="registerPassword" placeholder="Enter Password">
+                <span id="registerPasswordError" class="error"></span>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter Password">
+                <span id="confirmPasswordError" class="error"></span>
+
+                <button type="submit" class="action-btn">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

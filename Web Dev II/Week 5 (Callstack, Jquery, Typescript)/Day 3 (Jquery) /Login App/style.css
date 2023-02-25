@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: rgb(176, 250, 250);
+    --secondary: rgb(167, 209, 246);;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    padding: 24px 32px;
+}
+
+.tab, h1, h2 {
+    text-align: center;
+    margin: 16px;
+}
+
+form {
+    text-align: center;
+}
+
+.tab button {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.active {
+    background-color: var(--primary) !important;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin: 6px  0px;
+    display: block;
+}
+
+label {
+    display: block;
+    margin: 6px;
+}
+
+input {
+    width: 75%;
+    padding: 0 12px;
+    height: 32px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid var(--secondary);
+}
+
+.action-btn {
+    width: 75%;
+    height: 32px;
+    border: 1px solid var(--secondary);;
+    background-color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.action-btn:hover {
+    background-color: var(--primary);
+}
