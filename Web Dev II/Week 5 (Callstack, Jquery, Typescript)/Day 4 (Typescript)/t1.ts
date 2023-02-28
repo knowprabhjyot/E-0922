@@ -50,16 +50,113 @@ console.log(greeting('Prabh', 28));
 
 // Types
 
-// Classes
+type Company = {
+    name: string,
+    address: string,
+    numberOfDepartments: number
+}
+
+type Employee = {
+    name: string,
+    email: string,
+    age: number,
+    company: Company
+}
+
+let employee: Employee = {
+    name : "Prabh",
+    age: 28,
+    email: "prabh@ciccc.ca",
+    company: {
+        name: "CICCC",
+        numberOfDepartments: 10,
+        address: "Vancouver"
+    }
+}
 
 // Interfaces
+interface Student {
+    name: string,
+    // Question mark means that this field is optional
+    rollNumber?: number | string | undefined,
+    isGraduated: boolean
+}
+
+interface Point {
+    x: number;
+}
+
+interface Point {
+    y : number;
+}
+
+let point1 : Point = {
+    x : 20,
+    y : 40
+}
+
+let student1: Student = {
+    name: 'Mike',
+    isGraduated: false,
+    // rollNumber: undefined
+}
 
 // Enum
+// It is a type of data structure where you can save constant data
+
+enum College {
+    name = "Cornerstone",
+    address = "Vancouver"
+}
+
+console.log(College);
+
 
 // UNIONS
+let age: number | string | boolean = true;
+
 
 // Generic Type
 
-// Tuples
+// oldway of writing a function
+function printArray(array: any) {
+    return array;
+}
+let a1 = [1,2,3];
+let a2 = ['1','2','3'];
+printArray(a1);
+printArray(a2);
 
-// Lodash
+function printArray2<T>(array: T): T {
+    return array;
+}
+
+printArray(a1);
+printArray(a2);
+
+// Another Example
+
+function concatArray<T>(items: T[]) : T[] {
+    return new Array<T>().concat(items);
+}
+
+let array1 = concatArray<number>([1,2, 3]);
+let array2 = concatArray<string>(['hello', ' ', 'world']);
+const array3 = concatArray<boolean>([true, false]);
+
+console.log(array2, "Value");
+
+// Tuples
+let studentArray : [number, string , boolean] = [1, 'Daniel', true];
+
+
+// Type Assertions
+
+let id: any = 2;
+
+let numberID = <number>id;
+// numberID = "helloworld"; // Not allowed
+
+let numID = id as number;
+
+// import { Component as XYZ } from '../'

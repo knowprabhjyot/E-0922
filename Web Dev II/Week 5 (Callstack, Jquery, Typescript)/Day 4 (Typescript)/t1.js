@@ -28,3 +28,60 @@ function greeting(name, age) {
     return "Hello " + name + " you are " + age + " years old";
 }
 console.log(greeting('Prabh', 28));
+var employee = {
+    name: "Prabh",
+    age: 28,
+    email: "prabh@ciccc.ca",
+    company: {
+        name: "CICCC",
+        numberOfDepartments: 10,
+        address: "Vancouver"
+    }
+};
+var point1 = {
+    x: 20,
+    y: 40
+};
+var student1 = {
+    name: 'Mike',
+    isGraduated: false
+};
+// Enum
+// It is a type of data structure where you can save constant data
+var College;
+(function (College) {
+    College["name"] = "Cornerstone";
+    College["address"] = "Vancouver";
+})(College || (College = {}));
+console.log(College);
+// UNIONS
+var age = true;
+// Generic Type
+// oldway of writing a function
+function printArray(array) {
+    return array;
+}
+var a1 = [1, 2, 3];
+var a2 = ['1', '2', '3'];
+printArray(a1);
+printArray(a2);
+function printArray2(array) {
+    return array;
+}
+printArray(a1);
+printArray(a2);
+// Another Example
+function concatArray(items) {
+    return new Array().concat(items);
+}
+var array1 = concatArray([1, 2, 3]);
+var array2 = concatArray(['hello', ' ', 'world']);
+console.log(array2, "Value");
+// Tuples
+var studentArray = [1, 'Daniel', true];
+// Type Assertions
+var id = 2;
+var numberID = id;
+// numberID = "helloworld"; // Not allowed
+var numID = id;
+// import { Component as XYZ } from '../'
