@@ -24,3 +24,6 @@ export function Header() {
         </header>
     )
 }
+
+// Create a footer component
+// and show it on the UI

@@ -10,6 +10,7 @@ function App() {
     <div className="App">
      {/* <h1>Hello World!</h1> */}
      <Header />
+     {/* Load your footer component here */}
     </div>
   );
 }
