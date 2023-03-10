@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 20px;
 }
 
 .App-logo {
