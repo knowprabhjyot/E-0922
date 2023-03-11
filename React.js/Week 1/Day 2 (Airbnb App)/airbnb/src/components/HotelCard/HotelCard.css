@@ -1,0 +1,39 @@
+.card {
+    width: 150px;
+    color: black;
+}
+
+.card-header {
+    margin-bottom: 10px;
+}
+
+.card-header img {
+    width: 180px;
+    height: 250px;
+    border-radius: 20px;
+
+}
+
+.card-body {
+    display: flex;
+    gap: 4px;  
+    align-items: center;
+    font-weight: 800;
+}
+
+.card-body img {
+    width: 20px;
+
+}
+
+.likes {
+   color: rgb(151, 151, 151);
+}
+
+.location {
+    display: flex;
+}
+
+.card-info p{
+    font-size: 12px;
+}

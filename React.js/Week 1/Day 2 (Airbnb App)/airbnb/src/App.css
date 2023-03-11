@@ -1,0 +1,6 @@
+.card-container {
+  display: flex;
+  gap: 60px;
+  padding: 16px;
+  overflow: scroll;
+}

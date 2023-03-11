@@ -1,0 +1,10 @@
+You have to make a User info application using React
+1. It needs to have 4 components 
+   a. Header (You can add some Buttons like Home, Contact)
+   b. Footer (It should say Developed by Your Name)
+   c. Main (Where you will show Users)
+   4. UserCard (Where you have to use the JSON data )
+      --> You should be able to see name, gender, image , email
+      --> You should some other info as well like - address, company Name
+      --> If you want you can show more information .
+2. Try To keep a clean UI , so use CSS affectively
