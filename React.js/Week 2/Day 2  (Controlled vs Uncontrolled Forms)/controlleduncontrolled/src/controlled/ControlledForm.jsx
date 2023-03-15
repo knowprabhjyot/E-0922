@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { setValueInLocalStorage } from '../utils/localstorage';
 import './ControlledForm.css';
 
+
 export default function ControlledForm() {
   const [studentName, setStudentName] = useState("");
   const [studentEmail, setStudentEmail] = useState("");

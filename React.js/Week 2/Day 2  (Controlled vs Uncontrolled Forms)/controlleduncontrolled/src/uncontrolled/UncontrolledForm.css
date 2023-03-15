@@ -1,0 +1,22 @@
+form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+input, select {
+    padding: 14px;
+    width: 300px;
+}
+
+button {
+    background-color: rgb(114, 68, 7);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    width: 300px;
+}

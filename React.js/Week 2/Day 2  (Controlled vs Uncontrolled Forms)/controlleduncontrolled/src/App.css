@@ -4,4 +4,10 @@
   padding: 20px;
 }
 
+.uncontrolledContainer {
+  background-color: antiquewhite;
+}
 
+.controlledContainer {
+  background-color: aquamarine;
+}
