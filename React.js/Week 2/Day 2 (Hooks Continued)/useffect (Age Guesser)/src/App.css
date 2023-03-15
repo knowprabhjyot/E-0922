@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(74, 74, 74);
+  flex-direction: column;
+  color: white;
+}
+
+.App input {
+  width: 400px;
+  padding: 10px 20px;
+  border: none;
+}
+
+.App button {
+  background-color: antiquewhite;
+  width: 200px;
+  border: none;
+  padding: 10px 20px;  
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainer {
+  display: flex;
+}
