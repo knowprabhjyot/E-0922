@@ -2,7 +2,9 @@ import React from 'react';
 import TableContainer from '@mui/material/TableContainer';
 import { Paper, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 import { Box } from '@mui/system';
-
+import { Link } from 'react-router-dom';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 const CryptoTable = ({ currencyData }) => {
 
@@ -25,10 +27,24 @@ const CryptoTable = ({ currencyData }) => {
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell component="th" scope="row">
-                                  <Box display="flex" alignItems="center" gap={5}>
-                                  <img src={currency.image} width={30} height={30} alt='' />
-                                    {currency.name}
-                                  </Box>
+                                    <Box display="flex" alignItems="center" gap={5}>
+                                        <img src={currency.image} width={30} height={30} alt='' />
+                                        <Link to={`currency/${currency.id}`}>
+                                            <span>{currency.name}</span>
+                                        </Link>
+
+                                        <Box display={"flex"} alignItems="center">
+                                            <span style={{
+                                                color: currency.price_change_percentage_24h > 0 ? 'green' : 'red'
+                                            }}> {currency.price_change_percentage_24h.toFixed(2)}</span>
+
+                                            {
+                                                currency.price_change_percentage_24h > 0 ? <ArrowUpwardIcon style={{ color: 'green' }} /> : <ArrowDownwardIcon style={{ color: 'red' }} />
+                                            }
+                                        </Box>
+
+
+                                    </Box>
                                 </TableCell>
 
                                 <TableCell>
