@@ -6,7 +6,6 @@ import { Box } from '@mui/system';
 
 const CryptoTable = ({ currencyData }) => {
 
-    console.log(currencyData);
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
