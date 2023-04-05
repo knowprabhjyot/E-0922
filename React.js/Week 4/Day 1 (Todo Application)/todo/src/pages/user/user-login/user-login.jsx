@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import TextField from '@mui/material/TextField';
 import { Box, Typography } from '@mui/material';
 import classes from './userLogin.module.css';
@@ -17,6 +17,14 @@ export default function UserLogin() {
 
     const navigate = useNavigate();
 
+    useEffect(() => {
+        const currentuser = localStorage.getItem('current-user');
+
+        if (currentuser) {
+            navigate('/user/home');
+        }
+    }, []);
+
     const handleClose = () => {
         setOpenAlert(false);
       }
@@ -32,7 +40,7 @@ export default function UserLogin() {
                 setSeverity('success');
                 setMessage('Logged In Succesfully!');
 
-                localStorage.setItem('current-user', foundUser);
+                localStorage.setItem('current-user', JSON.stringify(foundUser));
 
                 setTimeout(() => {
                     navigate('/user/home');

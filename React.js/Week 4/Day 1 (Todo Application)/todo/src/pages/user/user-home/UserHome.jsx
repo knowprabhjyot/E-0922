@@ -1,19 +1,90 @@
-import React, { useEffect } from 'react'
+import { AppBar, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Fab, IconButton, TextField, Toolbar, Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
+import CustomButton from '../../../components/CustomButton';
+import AddIcon from '@mui/icons-material/Add';
+import { Box } from '@mui/system';
 
 export default function UserHome() {
 
     const navigate = useNavigate();
+    const [user, setUser] = useState({});
+    const [openDialog, setOpenDialog] = useState(false);
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
 
     useEffect(() => {
-        const currentuser = localStorage.getItem('current-user');
+        const currentuser = JSON.parse(localStorage.getItem('current-user'));
 
         if (!currentuser) {
             navigate('/user/login');
+        } else {
+            setUser(currentuser);
         }
     }, []);
 
+
+    const handleClose = () => {
+        setOpenDialog(false);
+    }
+
+    const handleSubmitTodo = () => {
+      const newTodo = {
+        title,
+        description
+      }
+      const todoList = JSON.parse(localStorage.getItem('todoList')) || [];
+      todoList.push(newTodo);
+
+      localStorage.setItem('todoList', JSON.stringify(todoList));
+
+      handleClose();
+    }
+
     return (
-        <div>UserHome</div>
+        <div>
+            <AppBar position="static">
+                <Toolbar>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="menu"
+                        sx={{ mr: 2 }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                    <Typography variant="h6">
+                        Hello {user.userName}, Welcome to Todo
+                    </Typography>
+                    {/* <CustomButton /> */}
+                </Toolbar>
+            </AppBar>
+
+            <Dialog open={openDialog} onClose={handleClose}>
+                <DialogTitle>Todo</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        Enter the task you want to do!
+                    </DialogContentText>
+                    {/* <Divider /> */}
+                    <Box marginTop="8px" display="flex" flexDirection="column" gap="20px">
+                        <TextField value={title} onChange={(e) => setTitle(e.target.value)} variant="outlined" label="Title" type="text" placeholder="Enter Todo Title" />
+                        <TextField value={description} onChange={(e) => setDescription(e.target.value)} variant="outlined" label="Description" type="text" placeholder="Enter Todo Description" />
+                    </Box>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose}>Cancel</Button>
+                    <Button onClick={handleSubmitTodo}>Submit</Button>
+                </DialogActions>
+            </Dialog>
+
+            <Box position="fixed" bottom="30px" right="30px">
+                <Fab onClick={() => setOpenDialog(true)} size="small" color="secondary" aria-label="add">
+                    <AddIcon />
+                </Fab>
+            </Box>
+        </div>
     )
 }
