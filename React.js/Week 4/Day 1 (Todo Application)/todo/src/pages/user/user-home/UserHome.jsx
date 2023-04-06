@@ -1,6 +1,6 @@
-import { AppBar, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Fab, IconButton, TextField, ToggleButton, ToggleButtonGroup, Toolbar, Typography } from '@mui/material';
+import { AppBar, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Drawer, Fab, IconButton, TextField, ToggleButton, ToggleButtonGroup, Toolbar, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import CustomButton from '../../../components/CustomButton';
 import AddIcon from '@mui/icons-material/Add';
@@ -16,6 +16,8 @@ export default function UserHome() {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [priority, setPriority] = useState("low");
+    const [openDrawer, setOpenDrawer] = useState(false);
+    const [isCompleteView, setIsCompleteView] = useState(false);
 
     const [todosList, setTodosList] = useState([]);
     const [newTaskCreated, setNewTaskCreated] = useState({});
@@ -41,8 +43,31 @@ export default function UserHome() {
     }, [newTaskCreated]);
 
 
-    const markTaskComplete = () => {
-        alert("Fired");
+    const markTaskComplete = (id) => {
+
+
+        // So here we are updating todos if it was completed!
+        const modifiedTodosList = todosList.map((todo) => {
+            if (todo.id === id) {
+                todo.isCompleted = true;
+            }
+
+            return todo;
+        })
+
+        setTodosList(modifiedTodosList);
+        localStorage.setItem('todoList', JSON.stringify(modifiedTodosList));
+    }
+
+
+    const deleteTask = (id) => {
+        const modifiedTodosList = todosList.filter((todo) => {
+            if (todo.id !== id) {
+                return true;
+            }
+        })
+        setTodosList(modifiedTodosList);
+        localStorage.setItem('todoList', JSON.stringify(modifiedTodosList));
     }
 
 
@@ -71,6 +96,31 @@ export default function UserHome() {
         handleClose();
     }
 
+    // const showCompletedTasks = () => {
+    //     setIsCompleteView(true);
+
+    //     return todosList.filter((todo) => todo.isCompleted).map((todoItem) => {
+    //         return <CustomCard deleteTask={(id) => deleteTask(id)} setComplete={(id) => markTaskComplete(id)} todo={todoItem} />
+    //     })
+    // }
+
+    const showAllTasks = () => {
+        // setIsCompleteView(false);
+        return todosList.map((todoItem) => {
+            return <CustomCard deleteTask={(id) => deleteTask(id)} setComplete={(id) => markTaskComplete(id)} todo={todoItem} />
+        })
+    }
+
+    // const showTasks = () => {
+    //     if (isCompleteView) {
+    //          // Show complete tasks
+    //          return showCompletedTasks();
+    //     } else {
+    //         // show All tasks
+    //         return showAllTasks();
+    //     }
+    // }
+
     return (
         <div>
             <AppBar position="static">
@@ -81,6 +131,7 @@ export default function UserHome() {
                         color="inherit"
                         aria-label="menu"
                         sx={{ mr: 2 }}
+                        onClick={() => setOpenDrawer(true)}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -90,6 +141,16 @@ export default function UserHome() {
                     {/* <CustomButton /> */}
                 </Toolbar>
             </AppBar>
+
+            <Drawer
+                open={openDrawer}
+                // anchor={anchor}
+                // open={state[anchor]}
+                onClose={() => setOpenDialog(false)}
+            >
+                <CustomButton handleClick={showAllTasks} title="All Tasks" />
+                {/* <CustomButton handleClick={showCompletedTasks} title="Completed Tasks!" /> */}
+            </Drawer>
 
             <Dialog open={openDialog} onClose={handleClose}>
                 <DialogTitle>Todo</DialogTitle>
@@ -131,11 +192,7 @@ export default function UserHome() {
                 todosList.length === 0 ? <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
                     <Typography>No Tasks added yet</Typography>
                 </Box> : <Box display="grid" gridTemplateColumns="repeat(4, 1fr)" gap="8px" margin="20px">
-                    {
-                        todosList.map((todoItem) => {
-                            return <CustomCard setComplete={markTaskComplete} todo={todoItem} />
-                        })
-                    }
+                 { showAllTasks ()  }
                 </Box>
             }
 
