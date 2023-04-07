@@ -13,7 +13,6 @@ const Wrapper = styled.div`
 
 export default function Home() {
     const { theme } = useContext(ThemeContext);
-
     return (
         <Wrapper theme={theme}>
             <Profile content={"Hey, I am Prabh. I am developer and an instructor."} />

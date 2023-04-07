@@ -8,16 +8,18 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import ThemeContext from "./context/ThemeContext";
 import { useState } from "react";
+import { useRef } from "react";
 
 function App() {
   const [theme, setTheme] = useState("dark");
+  const appRef= useRef();
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
   return (
-    <>
+    <div ref={appRef}>
       <ThemeContext.Provider
         value={{theme,toggleTheme}}
       >
@@ -27,9 +29,9 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Footer />
+        <Footer rootRef={appRef} />
       </ThemeContext.Provider>
-    </>
+    </div>
   );
 }
 
