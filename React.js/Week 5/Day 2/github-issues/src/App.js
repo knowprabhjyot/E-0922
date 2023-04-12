@@ -24,14 +24,14 @@ import Home from "./pages/HomePage";
 
 function App() {
   const [appTheme, setAppTheme] = useState("dark");
-  const [issuesData, setIssuesData] = useState();
+  const [issuesData, setIssuesData] = useState([]);
   const [searchedKeyword, setSearchedKeyword] = useState("");
 
   useEffect(() => {
     axios
       .get("https://api.github.com/repos/angular/angular/issues")
       .then((response) => {
-        setIssuesData(response);
+        setIssuesData(response.data);
       });
   }, []);
 
@@ -42,7 +42,7 @@ function App() {
   return (
     <IssuesContext.Provider value={issuesData}>
       <ThemeProvider theme={appTheme === "dark" ? darkTheme : lightTheme}>
-        <AppBar position="static" color="secondary">
+        <AppBar position="static" color="primary">
           <Toolbar>
             <Box
               display="flex"
@@ -73,8 +73,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/issues" element={<Issues />} />
-          <Route path="/issues/:id" element={<IssueDetail />} />
+          {/* <Route path="/issues" element={<Issues />} /> */}
+          <Route path="/issue/:id" element={<IssueDetail />} />
           <Route path="*" element={<PageNotFoundPage />} />
         </Routes>
       </ThemeProvider>

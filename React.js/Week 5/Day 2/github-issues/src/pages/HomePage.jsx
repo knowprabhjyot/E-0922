@@ -1,7 +1,10 @@
 import React from 'react'
+import Issues from './IssuesPage'
 
 export default function Home() {
     return (
-        <div>HomePage</div>
+        <div>
+            <Issues />
+        </div>
     )
 }
