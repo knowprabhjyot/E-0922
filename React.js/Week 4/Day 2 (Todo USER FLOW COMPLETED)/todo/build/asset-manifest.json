@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Tododeploy/static/css/main.26e6fbae.css",
+    "main.js": "/Tododeploy/static/js/main.ca5d8804.js",
+    "static/js/787.63e47474.chunk.js": "/Tododeploy/static/js/787.63e47474.chunk.js",
+    "index.html": "/Tododeploy/index.html",
+    "main.26e6fbae.css.map": "/Tododeploy/static/css/main.26e6fbae.css.map",
+    "main.ca5d8804.js.map": "/Tododeploy/static/js/main.ca5d8804.js.map",
+    "787.63e47474.chunk.js.map": "/Tododeploy/static/js/787.63e47474.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26e6fbae.css",
+    "static/js/main.ca5d8804.js"
+  ]
+}
