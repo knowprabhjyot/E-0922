@@ -6,8 +6,8 @@ export const darkTheme = createTheme({
     mode: "dark",
     primary: {
         main: red[400]
-    }
-  },
+    },
+  }
 });
 
 export const lightTheme = createTheme({
