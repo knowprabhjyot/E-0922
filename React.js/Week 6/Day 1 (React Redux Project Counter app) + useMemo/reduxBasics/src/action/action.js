@@ -16,3 +16,7 @@ export function decrementValue(countValue) {
 
 
 // Redux Toolkit  (CounterSlice.js)
+
+// Redux and Redux TOolkit are same things
+
+// Redux toolkit it makes your life a little easier for beginners
