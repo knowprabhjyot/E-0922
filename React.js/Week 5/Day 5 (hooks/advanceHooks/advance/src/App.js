@@ -83,4 +83,5 @@ export default App;
   // If it works ? Try to break it ? and then use Callback to fix it ?
   // If it doesn't work, you have to use callback anyway
 
-// Introduction to redux
+// Introduction to redux (Counter APP)
+// Tomorrow We will do a todo app With Redux
