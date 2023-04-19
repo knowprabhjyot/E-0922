@@ -35,3 +35,8 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.completed-todo {
+  text-decoration: line-through;
+}
