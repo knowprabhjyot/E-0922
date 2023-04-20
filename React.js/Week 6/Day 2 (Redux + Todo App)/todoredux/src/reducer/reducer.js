@@ -9,6 +9,7 @@ const initialState = {
   todos: [],
 };
 
+
 // HOW TO DO!
 function rootReducer(state = initialState, action) {
   switch (action.type) {
