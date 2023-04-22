@@ -3,7 +3,7 @@ import {
   applyMiddleware,
   combineReducers,
 } from "redux";
-import { CartReducer } from "../reducers/cartReducer";
+import CartReducer from "../reducers/cartReducer";
 import { ProductReducer } from "../reducers/productReducer";
 import thunk from "redux-thunk";
 
@@ -18,6 +18,6 @@ const rootReducer = combineReducers({
 // that's why we need a middleware that tells the store in redux, that the api data is fetched,
 // and it updates the store as well.
 
-const store = createStore(ProductReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;

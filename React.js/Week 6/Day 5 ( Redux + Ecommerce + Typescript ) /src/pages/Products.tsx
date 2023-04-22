@@ -18,8 +18,10 @@ const Products: React.FC = () => {
 
   /// fetching products from the store
   const { isLoading, isError, products } = useSelector(
-    (state: ProductState) => state
+    (state: any) => state.product
   );
+
+  console.log(products, "products");
 
   useEffect(() => {
     // This is where you call the api
@@ -39,3 +41,6 @@ const Products: React.FC = () => {
     </ProductSection>
   );
 }
+
+
+export default Products;

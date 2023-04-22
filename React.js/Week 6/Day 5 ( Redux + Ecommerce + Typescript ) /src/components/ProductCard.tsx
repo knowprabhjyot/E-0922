@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { addToCart } from "../actions/cartActions";
+import { addToCart, removeToCart } from "../actions/cartActions";
 import { Product } from "../types/types";
 
 // Create your own Props here
@@ -21,6 +21,8 @@ const ProductCardContainer = styled.div`
   }
 `;
 
+// Maybe you have to create a new Prop here
+
 const ProductCard: React.FC<Product> = ({
   id,
   title,
@@ -29,21 +31,34 @@ const ProductCard: React.FC<Product> = ({
   category,
   price,
 }) => {
-
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
     const data: Product = {
-        id,
-        title,
-        image,
-        description,
-        category,
-        price
+      id,
+      title,
+      image,
+      description,
+      category,
+      price,
     };
 
     dispatch(addToCart(data));
   };
+
+  const handleRemoveFromCart = () => {
+    const data: Product = {
+      id,
+      title,
+      image,
+      description,
+      category,
+      price,
+    };
+    dispatch(removeToCart(data))
+  }
+
+  // HINT (TRY TO MODIFY THE INCOMING PROPS)
 
   return (
     <ProductCardContainer>
@@ -56,7 +71,9 @@ const ProductCard: React.FC<Product> = ({
       <p>
         <b>Category: {category}</b>
       </p>
+      {/* Handle this if its a product page then only show add to cart otherwise show removefromcart */}
       <button onClick={handleAddToCart}>Add To Cart</button>
+      <button onClick={handleRemoveFromCart}>Remove From Cart</button>
     </ProductCardContainer>
   );
 };
