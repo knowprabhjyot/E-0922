@@ -25,7 +25,8 @@ const NavContainer = styled.nav`
   }
 `;
 
-export default function Nav() {
+export default function Nav(): JSX.Element {
+
   return (
     <NavContainer>
       <ul>
